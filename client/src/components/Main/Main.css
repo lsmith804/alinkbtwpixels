@@ -1,0 +1,8 @@
+.maincontent {
+    display: inline-block;
+    text-align: center;
+    border-style: dotted;
+    border-color: blue;
+    border-width: .1em;
+    top: 10em;
+}
