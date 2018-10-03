@@ -32,6 +32,7 @@ class App extends Component {
   render() {
     const App = () => (
       <div>
+        <Top/>
         <Side/>
         <Switch>
           <Route exact path='/' component={Home}/>

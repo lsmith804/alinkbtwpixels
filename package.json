@@ -12,7 +12,6 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -20,9 +19,11 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.15.4",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "if-env": "^1.0.4",
+    "mongojs": "^2.6.0",
+    "morgan": "^1.9.1",
     "react-router-dom": "^4.3.1"
   }
 }
