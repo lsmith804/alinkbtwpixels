@@ -27,7 +27,7 @@ var collections = ["notes"];
 
 var db = mongojs(databaseUrl, collections);
 
-//Should they happen, log mongo errors to console
+//Should they happen, log errors to console
 db.on("error", function(error) {
   console.log("Database Error:", error);
 });
@@ -39,11 +39,29 @@ db.on("error", function(error) {
 
 
 
-app.get("/api/getList", (req,res) => {
-  var menu = ["item1", "item2", "item3"];
-  res.json(menu);
-  console.log("Main welcome menu loaded!");
+app.get("/all", function(req, res) {
+  // Find all notes in the notes collection
+  db.zeldaArticles.find({}, function(error, found) {
+    // Log any errors
+    if (error) {
+      console.log(error);
+    }
+    else {
+      // Otherwise, send json of the notes back to user
+      // This will fire off the success function of the ajax request
+      res.json(found);
+    }
+  });
 });
+
+
+// app.get("/api/getList", (req,res) => {
+//   var menu = ["item1", "item2", "item3"];
+//   res.json(menu);
+//   console.log("Main welcome menu loaded!");
+// });
+
+
 
 // Send every other request to the React app
 // Define any API routes before this runs

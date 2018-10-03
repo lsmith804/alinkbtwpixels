@@ -1,26 +1,12 @@
-// import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 // import logo from './logo.svg';
-// import './App.css';
 
 import Top from './components/Top';
 import Side from './components/Side';
 import Main from './components/Main';
 import Chat from './components/Chat/Chat';
 import Journal from './components/Journal/Journal';
-
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <Top/>
-//         <Side/>
-//         <Main/>
-//       </div>
-//     );
-//   }
-// }
+import Articles from './pages/Articles';
 
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
@@ -37,6 +23,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/list' component={List}/>
+          <Route exact path='/articles' component={Articles}/>
         </Switch>
       </div>
     )
