@@ -6,6 +6,22 @@ const PORT = process.env.PORT || 3001;
 var logger = require("morgan");
 const mongoose = require("mongoose");
 var cheerio = require("cheerio");
+const Discord = require("discord.js");
+const bot = new Discord.Client();
+
+//DiscordBOT
+bot.on('message', (message) => {
+ if (message.content == "Hello"){
+   message.reply("My name is Connor, I'm the android sent by Cyberlife."); 
+   //TO reply simply w/o the Mention
+   //message.channel.sendMessage("pong2");
+ }
+});
+
+bot.login("NDk3NDQ2NDQyNzQ3NjkxMDE4.DpfTyA.wYNwev66Dqudvr4_CHgvYdMXm7c");
+
+
+
 
 //Initialize express
 const app = express();
@@ -42,3 +58,4 @@ app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
  console.log("Hey beautiful."); 
 });
+
