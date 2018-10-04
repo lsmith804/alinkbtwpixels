@@ -6,11 +6,10 @@ class Home extends Component {
   render() {
     return (
     <div className="App">
-      <h1>Project Home</h1>
-      {/* Link to List.js */}
+      <h1>random heading</h1>
       <Link to={'./list'}>
         <button variant="raised">
-            My List
+            My List: clik me
         </button>
       </Link>
     </div>

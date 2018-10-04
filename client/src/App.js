@@ -1,18 +1,14 @@
 // import ReactDOM from 'react-dom';
 // import logo from './logo.svg';
-
 import Top from './components/Top';
 import Side from './components/Side';
-import Main from './components/Main';
-import Chat from './components/Chat/Chat';
-import Journal from './components/Journal/Journal';
 import Articles from './pages/Articles';
+import Home from './pages/Home';
 
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import List from './pages/List';
+import Famous from './pages/Famous';
 
 class App extends Component {
   render() {
@@ -22,7 +18,7 @@ class App extends Component {
         <Side/>
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route path='/list' component={List}/>
+          <Route exact path='/famous' component={Famous}/>
           <Route exact path='/articles' component={Articles}/>
         </Switch>
       </div>

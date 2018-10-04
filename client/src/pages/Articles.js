@@ -16,7 +16,7 @@ class Articles extends Component {
 
   // Retrieves the list of items from the Express app
   getArticles = () => {
-    fetch('/api/getArticles')
+    fetch('/articles')
     .then(res => res.json())
     .then(list => this.setState({ list }))
   

@@ -1,10 +1,11 @@
 const express = require("express");
+const mongojs = require("mongojs");
 const path = require("path");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
-const mongojs = require("mongojs");
 var logger = require("morgan");
-
+const mongoose = require("mongoose");
+var cheerio = require("cheerio");
 
 //Initialize express
 const app = express();
@@ -13,7 +14,7 @@ const app = express();
 app.use(logger("dev"));
 
 
-// Define middleware here
+//Body parser handles submissions
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
@@ -21,45 +22,13 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-//MONGO DB Config
-var databaseUrl = "cpsites";
-var collections = ["notes"];
-
-var db = mongojs(databaseUrl, collections);
-
-//Should they happen, log errors to console
-db.on("error", function(error) {
-  console.log("Database Error:", error);
-});
-
-
-
-
 // Define API routes here
 
 
-
-app.get("/all", function(req, res) {
-  // Find all notes in the notes collection
-  db.zeldaArticles.find({}, function(error, found) {
-    // Log any errors
-    if (error) {
-      console.log(error);
-    }
-    else {
-      // Otherwise, send json of the notes back to user
-      // This will fire off the success function of the ajax request
-      res.json(found);
-    }
-  });
+app.get("/list", (req,res) => {
+  var menu = ["item1", "item2", "item3"];
+  res.json(menu);
 });
-
-
-// app.get("/api/getList", (req,res) => {
-//   var menu = ["item1", "item2", "item3"];
-//   res.json(menu);
-//   console.log("Main welcome menu loaded!");
-// });
 
 
 

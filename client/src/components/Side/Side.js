@@ -1,4 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from 'react-router-dom';
+
 import "../Side";
 import "./Side.css";
 
@@ -7,37 +9,30 @@ const Side = props =>
 
 <aside className="menu">
   <p className="menu-label">
-    General
+    Welcome
   </p>
   <ul className="menu-list">
     <li><a>Dashboard</a></li>
-    <li><a>Customers</a></li>
+    <li><a>Personal Profile</a></li>
   </ul>
   <p className="menu-label">
-    Administration
+    Theorize
   </p>
-  <ul className="menu-list">
-    <li><a>Team Settings</a></li>
-    <li>
-      <a className="is-active">Manage Your Team</a>
-      <ul>
-        <li><a>Members</a></li>
-        <li><a>Plugins</a></li>
-        <li><a>Add a member</a></li>
-      </ul>
-    </li>
-    <li><a>Invitations</a></li>
-    <li><a>Cloud Storage Environment Settings</a></li>
-    <li><a>Authentication</a></li>
+    <ul className="menu-list">
+    <li><a>Classic Mysteries</a></li>
+    <li><a>New Mysteries in 2018</a></li>
+    <li><a>Post a NEW Theory</a></li>
+    <li><a>BETA: Famous Characters List</a></li>
   </ul>
   <p className="menu-label">
-    Settings
+    Social
   </p>
   <ul className="menu-list">
-    <li><a>Account</a></li>
-    <li><a>Edit Profile</a></li>
-    <li><a>Balance</a></li>
+    <li><a>Members List</a></li>
+    <li><a>Chat</a></li>
+    <li><a>Refer a Friend</a></li>
   </ul>
+
 </aside>
 
 
