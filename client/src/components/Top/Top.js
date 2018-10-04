@@ -4,15 +4,19 @@ import "./Top.css";
 
 
 const Top = props =>
-<section className="hero is-info is-bold is-small">
+<section className="hero is-bold is-small">
   <div className="hero-body">
     <div className="container">
-      <h1 className="title">
+      <h1>
         Gaming Theories & Mysteries
       </h1>
       <h2 className="subtitle">
-        The hub for researching & sharing mysteries, oddities, and quirks in video games.
+        For the love of researching and sharing oddities in video games. ^_^
       </h2>
+      <ul>
+      <li><a href="https://www.google.com" target="_blank">Link 1</a></li>
+      <li><a href="https://www.google.com" target="_blank">Link 2</a></li>
+      </ul>
     </div>
   </div>
 </section>;

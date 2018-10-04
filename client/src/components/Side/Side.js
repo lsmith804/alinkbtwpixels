@@ -5,7 +5,7 @@ import "../Side";
 import "./Side.css";
 
 
-const Side = props =>
+const Side = () =>
 
 <aside className="menu">
   <p className="menu-label">
@@ -22,14 +22,14 @@ const Side = props =>
     <li><a>Classic Mysteries</a></li>
     <li><a>New Mysteries in 2018</a></li>
     <li><a>Post a NEW Theory</a></li>
-    <li><a>BETA: Famous Characters List</a></li>
+    <li><Link to={'./famous'}>BETA: Famous Characters List</Link></li>
   </ul>
   <p className="menu-label">
     Social
   </p>
   <ul className="menu-list">
-    <li><a>Members List</a></li>
-    <li><a>Chat</a></li>
+    <li><Link to={'./members'}>Members List</Link></li>
+    <li><Link to={'./chat'}>Chat</Link></li>
     <li><a>Refer a Friend</a></li>
   </ul>
 

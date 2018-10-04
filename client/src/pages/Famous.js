@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import characters from "../characters.json"
 
 
-var famouspplNames = [];
+let famouspplNames = [];
 for (var i = 0; i < characters.length; i++) {
   famouspplNames.push(characters[i].name);
 };
+
+let famouspplImage = [];
+for (var i = 0; i < characters.length; i++) {
+  famouspplImage.push(characters[i].image);
+};
+
 
 class List extends Component {
   // Initialize the state
@@ -23,6 +29,7 @@ class List extends Component {
     return (
       <div className="App">
         {<h1>{famouspplNames}</h1>}
+        {<img src={famouspplImage}/>}
 
       </div>
     );
