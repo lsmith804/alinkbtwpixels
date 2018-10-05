@@ -7,6 +7,7 @@ var logger = require("morgan");
 const mongoose = require("mongoose");
 var cheerio = require("cheerio");
 const Discord = require("discord.js");
+require('dotenv').config()
 const token = process.env.DISCORD_BOT_SECRET;
 
 // const commando = require("discord.js-commando");
