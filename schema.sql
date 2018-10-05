@@ -1,25 +1,20 @@
 ### Schema
-DROP DATABASE IF EXISTS bot_learning;
+DROP DATABASE IF EXISTS profile_db;
 
-CREATE DATABASE bot_learning;
+CREATE DATABASE profile_db;
 
-USE bot_learning;
+USE profile_db;
 
-CREATE TABLE greetings
+CREATE TABLE userProfile
 (
 	id int NOT NULL AUTO_INCREMENT,
-	words varchar(255) NOT NULL,
+	realname varchar(50) NULL,
+	username varchar(50) NULL,
+	favoriteGame varchar(100),
+	aboutMe varchar(500),
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE goodbyes
-(
-	id int NOT NULL AUTO_INCREMENT,
-	words varchar(255) NOT NULL,
-	PRIMARY KEY (id)
-);
-
-SELECT * FROM greetings;
-SELECT * FROM goodbyes;
+SELECT * FROM userProfile;
 
 

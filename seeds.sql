@@ -1,10 +1,5 @@
-SELECT * FROM greetings;
-SELECT * FROM goodbyes;
+INSERT INTO userProfile (realname, username, favoriteGame, aboutMe) VALUES ("Lori Smith", "LonLonRancher", "Zelda", "Dedicated LOZ fan!");
+INSERT INTO userProfile (realname, username, favoriteGame, aboutMe) VALUES ("Connor Anderson", "ConnorBOT", "Detroit: Become Human", "My name is Connor. I'm the android sent by cyberlife.");
+INSERT INTO userProfile (realname, username, favoriteGame, aboutMe) VALUES ("Leroy Jenkins", "WowLeeroy", "World of Warcraft", "I enjoy chicken and PC gaming. Thumbs up, let's do this!");
 
-INSERT INTO greetings (words) VALUES ('Hello!');
-INSERT INTO greetings (words) VALUES ('Hi!');
-INSERT INTO greetings (words) VALUES ('Hey!');
-
-INSERT INTO goodbyes (words) VALUES ('Bye');
-INSERT INTO goodbyes (words) VALUES ('Later');
-INSERT INTO goodbyes (words) VALUES ('See ya');
+SELECT * FROM userProfile;
