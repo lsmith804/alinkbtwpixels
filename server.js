@@ -7,6 +7,7 @@ var logger = require("morgan");
 const mongoose = require("mongoose");
 var cheerio = require("cheerio");
 const Discord = require("discord.js");
+const token = process.env.DISCORD_BOT_SECRET;
 
 // const commando = require("discord.js-commando");
 
@@ -25,7 +26,7 @@ bot.on('ready', () => {
   bot.user.setActivity('DBH');
 });
 
-bot.login("NDk3NDQ2NDQyNzQ3NjkxMDE4.DpfTyA.wYNwev66Dqudvr4_CHgvYdMXm7c");
+bot.login(token);
 
 //Initialize express
 const app = express();
