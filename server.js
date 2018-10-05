@@ -19,9 +19,11 @@ const bot = new commando.Client();
 //  }
 // });
 
-bot.registry.registerGroup('random', 'Random');
+bot.registry.registerGroups([
+  ['random', 'Random']
+]);
 bot.registry.registerDefaults(); //Helpful default commands!
-bot.registry.registerCommandsIn(__dirname + "/commands");
+bot.registry.registerCommandsIn(__dirname + "./commands");
 
 bot.login("NDk3NDQ2NDQyNzQ3NjkxMDE4.DpfTyA.wYNwev66Dqudvr4_CHgvYdMXm7c");
 

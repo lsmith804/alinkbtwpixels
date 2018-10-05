@@ -6,15 +6,14 @@ class DiceRollCommand extends commando.Command {
             name: "roll",
             group: "random",
             memberName: "roll",
-            description: "rolls a di!"
+            description: "rolls a di!",
+            examples: ['roll']
         });
     }
-    async run(message, args) { //this is called every time some activates the command
-        var roll = Math.floor(Math.random() * 6) + 1; //Rolls a 6 sided 
-        message.reply("You rolled a " + roll);
-        message.channel.sendMessage("pong2");
+    async run(msg){
+        return msg.say("hellooo");
     }
 
-}
+};
 
 module.exports = DiceRollCommand;
