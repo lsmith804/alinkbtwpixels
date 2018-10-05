@@ -6,29 +6,26 @@ const PORT = process.env.PORT || 3001;
 var logger = require("morgan");
 const mongoose = require("mongoose");
 var cheerio = require("cheerio");
-//const Discord = require("discord.js");
-const commando = require("discord.js-commando");
-const bot = new commando.Client();
+const Discord = require("discord.js");
+
+// const commando = require("discord.js-commando");
 
 //DiscordBOT
-// bot.on('message', (message) => {
-//  if (message.content == "Hello"){
-//    message.reply("My name is Connor, I'm the android sent by Cyberlife."); 
-//    //TO reply simply w/o the Mention
-//    //message.channel.sendMessage("pong2");
-//  }
-// });
+const bot = new Discord.Client();
+bot.on('message', (message) => {
+ if (message.content == "Hello"){
+   message.reply("My name is Connor, I'm the android sent by Cyberlife."); 
+   //TO reply simply w/o the Mention
+   //message.channel.sendMessage("pong2");
+ }
+});
 
-bot.registry.registerGroups([
-  ['random', 'Random']
-]);
-bot.registry.registerDefaults(); //Helpful default commands!
-bot.registry.registerCommandsIn(__dirname + "./commands");
+bot.on('ready', () => {
+  console.log('Logged in!');
+  bot.user.setActivity('DBH');
+});
 
 bot.login("NDk3NDQ2NDQyNzQ3NjkxMDE4.DpfTyA.wYNwev66Dqudvr4_CHgvYdMXm7c");
-
-
-
 
 //Initialize express
 const app = express();
