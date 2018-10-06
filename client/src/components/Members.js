@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MemberCard from '../components/MemberCard';
+import MemberCard from './MemberCard';
 import members from "../members.json"
 
 class Members extends Component {

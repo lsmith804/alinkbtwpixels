@@ -1,16 +1,18 @@
 // import ReactDOM from 'react-dom';
 // import logo from './logo.svg';
-import Top from './components/Top';
+import Chat from './components/Chat';
 import Side from './components/Side';
-import Articles from './pages/Articles';
-import Home from './pages/Home';
+import Top from './components/Top';
+import Articles from './components/Articles';
+import Famous from './components/Famous';
+import Home from './components/Home';
+import List from './components/List';
+import Members from './components/Members';
 
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Famous from './pages/Famous';
-import Members from './pages/Members';
-import Chat from './components/Chat';
+
 
 
 class App extends Component {
@@ -25,6 +27,7 @@ class App extends Component {
           <Route exact path='/articles' component={Articles}/>
           <Route exact path='/members' component={Members}/>
           <Route exact path='/chat' component={Chat}/>
+          <Route exact path='/list' component={List}/>
 
 
         </Switch>

@@ -31,6 +31,7 @@ const Side = () =>
     <li><Link to={'./members'}>Members List</Link></li>
     <li><Link to={'./chat'}>Chat</Link></li>
     <li><a>Refer a Friend</a></li>
+    <li><a>Contact Us</a></li>
   </ul>
 
 </aside>

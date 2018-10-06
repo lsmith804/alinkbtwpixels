@@ -5,7 +5,11 @@ class List extends Component {
   constructor(props){
     super(props);
     this.state = {
-      list: []
+      list: [
+        "Headline 1",
+        "Headline 2",
+        "Headline 3"
+      ]
     }
   }
 
@@ -25,26 +29,16 @@ class List extends Component {
     const { list } = this.state;
 
     return (
-      <div className="App">
-        <h1>List of Items</h1>
-        {/* Check to see if any items are found*/}
-        {list.length ? (
+      <div className="container">
+        <h1>Top Headlines</h1>
+        <h2>Will probably do something different with this later...</h2>
           <div>
-            {/* Render the list of items */}
             {list.map((item) => {
               return(
-                <div>
-                  {item}
-                </div>
+                <div>{item}</div>
               );
             })}
           </div>
-        ) : (
-          <div>
-            <h2>No List Items Found</h2>
-          </div>
-        )
-      }
       </div>
     );
   }

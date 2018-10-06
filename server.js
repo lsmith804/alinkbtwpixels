@@ -50,7 +50,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 app.get("/profiles/all", function(req, res){
-  var dbQuery = "SELECT * userProfile";
+  var dbQuery = "SELECT * FROM userProfile";
 
   connection.query(dbQuery, function(err, result){
     if (err) console.log ("couldnt get the profiles!");
