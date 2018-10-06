@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 
-class List extends Component {
+class Wrapper extends Component {
   // Initialize the state
   constructor(props){
     super(props);
     this.state = {
       list: [
-        "Headline 1",
-        "Headline 2",
-        "Headline 3"
-      ]
+        "List item 1",
+        "List item 2"      ]
     }
   }
 
@@ -44,4 +42,4 @@ class List extends Component {
   }
 }
 
-export default List;
+export default Wrapper;

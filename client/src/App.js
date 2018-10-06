@@ -8,6 +8,8 @@ import Famous from './components/Famous';
 import Home from './components/Home';
 import List from './components/List';
 import Members from './components/Members';
+//import MyProfile from './components/MyProfile';
+
 
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
@@ -25,11 +27,9 @@ class App extends Component {
           <Route exact path='/' component={Home}/>
           <Route exact path='/famous' component={Famous}/>
           <Route exact path='/articles' component={Articles}/>
-          <Route exact path='/members' component={Members}/>
+          <Route exact path='/profiles/all' component={Members}/> {/*change back to /members later*/}
           <Route exact path='/chat' component={Chat}/>
           <Route exact path='/list' component={List}/>
-
-
         </Switch>
       </div>
     )

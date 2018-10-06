@@ -54,7 +54,7 @@ app.get("/profiles/all", function(req, res){
 
   connection.query(dbQuery, function(err, result){
     if (err) console.log ("couldnt get the profiles!");
-    res.json(result);
+    res.json({ data: result });
     console.log("got the profiles");
   });
 });
