@@ -9,8 +9,11 @@ var cheerio = require("cheerio");
 const Discord = require("discord.js");
 require('dotenv').config()
 const token = process.env.DISCORD_BOT_SECRET;
+const connection = require("./connection");
 
-// const commando = require("discord.js-commando");
+
+//Commando Bot -Deprecated
+//const commando = require("discord.js-commando");
 
 //DiscordBOT
 const bot = new Discord.Client();
@@ -23,18 +26,19 @@ bot.on('message', (message) => {
 });
 
 bot.on('ready', () => {
-  console.log('Logged in!');
+  console.log('ConnorBOT is alive!');
   bot.user.setActivity('DBH');
 });
 
 bot.login(token);
+
+///////////////////////////////////////
 
 //Initialize express
 const app = express();
 
 //Logger for logging HTTP requests.
 app.use(logger("dev"));
-
 
 //Body parser handles submissions
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -45,6 +49,16 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
+app.get("/profiles/all", function(req, res){
+  var dbQuery = "SELECT * userProfile";
+
+  connection.query(dbQuery, function(err, result){
+    if (err) console.log ("couldnt get the profiles!");
+    res.json(result);
+    console.log("got the profiles");
+  });
+});
+
 
 
 app.get("/list", (req,res) => {
@@ -62,6 +76,5 @@ app.get("*", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
- console.log("Hey beautiful."); 
 });
 
