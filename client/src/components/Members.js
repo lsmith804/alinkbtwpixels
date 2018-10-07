@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import MemberCard from './MemberCard';
+//import MemberCard from './MemberCard';
 import members from "../members.json"
-import axios from "axios";
-import List from "./List";
-import Wrapper from "./Wrapper";
+//import axios from "axios";
+//import List from "./List";
+//import Wrapper from "./Wrapper";
+import "./Members.css";
+
+
 
 class Members extends Component {
   constructor(props){
@@ -53,17 +56,26 @@ render() {
 
   return (
     <div className="container">
-      <h1>{this.props.children}</h1>
-      <h2>{this.props.children}</h2>
+      <h1 className="title">Members</h1>
         <div>
           {members.map((item, index) => {
             return(
-              <div>
-              <div key={index}>{item.realname}</div>
-              <div key={index}>{item.username}</div>
-              <div key={index}>{item.favoriteGame}</div>
-              <div key={index}>{item.aboutMe}</div>
-
+              <div className="card is-block">
+                <div className="card-image">
+                <figure className="image is-2by2">
+                  <div key={index}><img src={item.photo} style={{width: 200, height: 200}}/></div>
+                </figure>
+                </div>
+                <div className="card-content">
+                <div className="media-content">
+                  <p key={index}>Name: {item.realname}</p>
+                  <div key={index}>Username: {item.username}</div>
+                </div>
+                <div className="content">
+                  <div key={index}>Favorite Game: {item.favoriteGame}</div>
+                  <div key={index}>About: {item.aboutMe}</div>
+                </div>
+                </div>
               </div>
             );
           })}
