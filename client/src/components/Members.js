@@ -19,7 +19,7 @@ class Members extends Component {
 //Mount component
 componentDidMount(){
   this.getMembers();
-  console.log("members: " + members.length)
+  console.log("Members loaded");
 }
 
 //What does "getMembers do?" This! Gets all books
