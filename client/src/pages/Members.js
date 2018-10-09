@@ -48,39 +48,36 @@ getMembers = async () => {
 //     event.preventDefault();
 //     event.target.selected = true;
 //     let member = event.target.name;  
-//     console.log(member);
+//     console.log("do something with this click");
 // }
  
 render() {
   const { members } = this.state;
 
   return (
-    <div className="section">
-      <h1 className="title">Members</h1>
-        <div>
+    <section className="hero is-small is-info is-bold">
+      <div className="hero-body">Members</div>
+          <div className="container membas">
           {members.map((item, index) => {
             return(
-              <div className="card is-block is-4by-3">
+              <div className="card is-block is-3by-3">
                 <div className="card-image">
                 <figure className="image is-2by2">
                   <div key={index}><img src={item.photo} style={{width: 100, height: 100}}/></div>
                 </figure>
                 </div>
-                <div className="card-content">
                 <div className="media-content">
                   <p key={index}>Name: {item.realname}</p>
-                  <div key={index}>Username: {item.username}</div>
-                </div>
-                <div className="content">
-                  <div key={index}>Favorite Game: {item.favoriteGame}</div>
-                  <div key={index}>About: {item.aboutMe}</div>
-                </div>
+                  <p key={index}>Username: {item.username}</p>
+                  <p key={index}>Favorite Game: {item.favoriteGame}</p>
+                  <p key={index}>About: {item.aboutMe}</p>
                 </div>
               </div>
             );
           })}
         </div>
-    </div>
+  </section>
+
   );
 
   };

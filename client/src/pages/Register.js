@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 //import MemberCard from './MemberCard';
-import members from "../members.json"
 //import axios from "axios";
 //import List from "./List";
 //import Wrapper from "./Wrapper";
 import "./Members.css";
+import WidgetBot from '@widgetbot/react-embed'
+
 
 
 
@@ -104,18 +105,16 @@ render() {
   </div>
 </form>
 
-<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async>
-  const crate = new Crate({
-    server: '299881420891881473',
-    channel: '355719584830980096'
-  })
-
-  /*crate.notify('Test notification')
-  crate.on('signIn', data => {
-    console.log(`Guest signed in as ${data.name}`)
-    crate.emit('sendMessage', 'Hello world')
-  })*/
-</script>
+{/* <WidgetBot
+    server="299881420891881473"
+    channel="355719584830980096"
+    onAPI={(api) => {
+      /*api.on('signIn', user => {
+        console.log(`Guest signed in as ${user.name}`, user)
+        api.emit('sendMessage', 'Hello world')
+      })*/
+    }}
+/> */}
 
 </div>
   );
