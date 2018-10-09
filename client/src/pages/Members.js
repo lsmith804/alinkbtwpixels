@@ -60,19 +60,23 @@ render() {
           <div className="container membas">
           {members.map((item, index) => {
             return(
-              <div className="card is-block is-3by-3">
-                <div className="card-image">
-                <figure className="image is-2by2">
-                  <div key={index}><img src={item.photo} style={{width: 100, height: 100}}/></div>
-                </figure>
+              <div className="container">
+                <div className="tile is-block">
+                  <div className="tile-image">
+                  <figure className="image is-2by2">
+                    <div key={index}><img src={item.photo} style={{width: 100, height: 100}}/></div>
+                  </figure>
+                  </div>
+                  <div className="media-content">
+                    <p key={index}>Name: {item.realname}</p>
+                    <p key={index}>Username: {item.username}</p>
+                    <p key={index}>Favorite Game: {item.favoriteGame}</p>
+                    <p key={index}>About: {item.aboutMe}</p>
+                  </div>
                 </div>
-                <div className="media-content">
-                  <p key={index}>Name: {item.realname}</p>
-                  <p key={index}>Username: {item.username}</p>
-                  <p key={index}>Favorite Game: {item.favoriteGame}</p>
-                  <p key={index}>About: {item.aboutMe}</p>
-                </div>
+                <hr></hr>
               </div>
+
             );
           })}
         </div>

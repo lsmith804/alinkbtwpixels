@@ -48,9 +48,8 @@ class MyProfile extends Component {
   render() {
     return (
 
-      <div className="App">
-          <h1 className="App-title">Members as of {Date()}</h1>
-            {this.data}
+      <div className="container">
+Helloworld
       </div>
     );
   };

@@ -12,17 +12,16 @@ const Side = () =>
     Welcome
   </p>
   <ul className="menu-list">
-    <li><a>Dashboard</a></li>
-    <li><a>My Profile</a></li>
+    <li><Link to={'./dashboard'}>Dashboard</Link></li>
+    <li><Link to={'./myprofile'}>My Profile</Link></li>
   </ul>
   <p className="menu-label">
     Theorize
   </p>
     <ul className="menu-list">
-    <li><a>Classic Mysteries</a></li>
-    <li><a>New Mysteries in 2018</a></li>
-    <li><a>Post a NEW Theory</a></li>
-    <li><Link to={'./famous'}>BETA: Famous Characters List</Link></li>
+    <li><Link to={'./classicmysteries'}>Classic Mysteries</Link></li>
+    <li><Link to={'./newmysteries'}>New Mysteries in 2018</Link></li>
+    <li><Link to={'./famous'}>Something Cool</Link></li>
   </ul>
   <p className="menu-label">
     Social
