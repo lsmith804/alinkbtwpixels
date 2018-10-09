@@ -13,7 +13,7 @@ const Side = () =>
   </p>
   <ul className="menu-list">
     <li><a>Dashboard</a></li>
-    <li><a>Personal Profile</a></li>
+    <li><a>My Profile</a></li>
   </ul>
   <p className="menu-label">
     Theorize

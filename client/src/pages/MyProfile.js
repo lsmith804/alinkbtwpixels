@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MemberCard from './MemberCard'; 
+import MemberCard from '../components/MemberCard'; 
 import members from "../members.json" //change this to a sample profile
 
 import axios from "axios";

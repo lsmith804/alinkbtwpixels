@@ -1,10 +1,8 @@
 const express = require("express");
-const mongojs = require("mongojs");
 const path = require("path");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 var logger = require("morgan");
-const mongoose = require("mongoose");
 var cheerio = require("cheerio");
 const Discord = require("discord.js");
 require('dotenv').config()
@@ -50,13 +48,31 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 app.get("/profiles/all", function(req, res){
-  var dbQuery = "SELECT * FROM userProfile";
-
-  connection.query(dbQuery, function(err, result){
+  connection.query("SELECT * FROM userProfile", function(err, result){
     if (err) console.log ("couldnt get the profiles!");
     res.json({ data: result });
-    console.log("got the profiles");
+    console.log(res);
   });
+});
+
+//Use form to register OR implement discord sign up?
+app.post("/register", function(req,res){
+  var newUser = req.body;
+  console.log("New User: " + newUser);
+
+  connection.query(
+    "INSERT INTO userProfile SET ?",
+    {
+      name: "Test New User",
+      username: "TesterMe",
+      favoriteGame: "Some Game!",
+      aboutMe: "I love testing!",
+      photo: "http://i.ytimg.com/vi/SKRWhJv0C_s/mqdefault.jpg"
+    },
+    function(err,res){
+      console.log("Member added!");
+    }
+  );
 });
 
 

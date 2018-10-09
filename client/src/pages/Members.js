@@ -55,15 +55,15 @@ render() {
   const { members } = this.state;
 
   return (
-    <div className="container">
+    <div className="section">
       <h1 className="title">Members</h1>
         <div>
           {members.map((item, index) => {
             return(
-              <div className="card is-block">
+              <div className="card is-block is-4by-3">
                 <div className="card-image">
                 <figure className="image is-2by2">
-                  <div key={index}><img src={item.photo} style={{width: 200, height: 200}}/></div>
+                  <div key={index}><img src={item.photo} style={{width: 100, height: 100}}/></div>
                 </figure>
                 </div>
                 <div className="card-content">

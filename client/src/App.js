@@ -3,11 +3,13 @@
 import Chat from './components/Chat';
 import Side from './components/Side';
 import Top from './components/Top';
-import Articles from './components/Articles';
+import Articles from './pages/Articles';
 import Famous from './components/Famous';
-import Home from './components/Home';
+import Home from './pages/Home';
 import List from './components/List';
-import Members from './components/Members';
+import Members from './pages/Members';
+import Register from './pages/Register';
+
 //import MyProfile from './components/MyProfile';
 
 
@@ -30,6 +32,8 @@ class App extends Component {
           <Route exact path='/members' component={Members}/>
           <Route exact path='/chat' component={Chat}/>
           <Route exact path='/list' component={List}/>
+          <Route exact path='/register' component={Register}/>
+
         </Switch>
       </div>
     )
