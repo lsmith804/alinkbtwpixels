@@ -57,35 +57,40 @@ app.get("/profiles/all", function(req, res){
 
 //Use form to register OR implement discord sign up?
 app.post("/register", function(req,res){
-  var newUser = req.body;
-  console.log("New User: " + newUser);
+  var newName = req.body.realname;
+  var newUsername = req.body.username;
+  var newFavoriteGame = req.body.favoriteGame;
+  var newAboutMe = req.body.aboutMe;
+  var newPhoto = req.body.photo;
 
   connection.query(
     "INSERT INTO userProfile SET ?",
     {
-      name: "Test New User",
-      username: "TesterMe",
-      favoriteGame: "Some Game!",
-      aboutMe: "I love testing!",
-      photo: "http://i.ytimg.com/vi/SKRWhJv0C_s/mqdefault.jpg"
+      realname: newName,
+      username: newUsername,
+      favoriteGame: newFavoriteGame,
+      aboutMe: newAboutMe,
+      photo: newPhoto
     },
-    function(err,res){
-      console.log("Member added!");
+    function(err, queryResult) {
+      if(!!err){
+        console.log(err);
+        res.send(err);
+        return
+      }
+      console.log(queryResult);
+      console.log("success!!!!!");
+      res.json(queryResult);
     }
-  );
+    );
 });
-
-
 
 app.get("/list", (req,res) => {
   var menu = ["item1", "item2", "item3"];
   res.json(menu);
 });
 
-
-
-// Send every other request to the React app
-// Define any API routes before this runs
+// Send every other request to the React app & define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
