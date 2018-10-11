@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 //import axios from "axios";
 //import List from "./List";
 //import Wrapper from "./Wrapper";
-import "./Register.css";
+import "./NewSubmission.css";
 import WidgetBot from '@widgetbot/react-embed'
 import axios from "axios";
 
-class Register extends Component {
+class NewSubmission extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -128,6 +128,7 @@ render() {
                   Submit
                 </button>
                 <hr></hr>
+                <p>Changed your mind?</p>
                 <button className="button is-primary" onClick={this.resetForm}>
                   Reset
                 </button>
@@ -151,4 +152,4 @@ render() {
   };
 }
 
-export default Register;
+export default NewSubmission;

@@ -2,14 +2,14 @@
 // import logo from './logo.svg';
 import Side from './components/Side';
 import Top from './components/Top';
-import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 import AboutUs from './pages/AboutUs';
 import ClassicMysteries from './pages/ClassicMysteries';
 import NewMysteries from './pages/NewMysteries';
 import SomethingCool from './pages/SomethingCool';
 import UserSubmissions from './pages/UserSubmissions';
 import Chat from './pages/Chat';
-import Register from './pages/Register';
+import NewSubmission from './pages/NewSubmission';
 import List from './components/List';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
@@ -23,8 +23,8 @@ class App extends Component {
         <Top/>
         <Side/>
         <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/dashboard' component={Home}/>
+          <Route exact path='/' component={Dashboard}/>
+          <Route exact path='/dashboard' component={Dashboard}/>
           <Route exact path='/aboutus' component={AboutUs}/>
           <Route exact path='/somethingcool' component={SomethingCool}/>
           <Route exact path='/classicmysteries' component={ClassicMysteries}/>
@@ -32,7 +32,7 @@ class App extends Component {
           <Route exact path='/userSubmissions' component={UserSubmissions}/>
           <Route exact path='/chat' component={Chat}/>
           <Route exact path='/list' component={List}/>
-          <Route exact path='/register' component={Register}/>
+          <Route exact path='/newsubmission' component={NewSubmission}/>
 
         </Switch>
       </div>

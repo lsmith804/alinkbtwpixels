@@ -19,12 +19,11 @@ const Side = () =>
     Theorize
   </p>
     <ul className="menu-list">
-    <li><Link to={'./classicmysteries'}>Classic Mysteries</Link></li>
-    <li><Link to={'./newmysteries'}>New Mysteries in 2018</Link></li>
-    <li><Link to={'./userSubmissions'}>User Submissions</Link></li>
-
-    <li><Link to={'./famous'}>Something Cool</Link></li>
-  </ul>
+      <li><Link to={'./classicmysteries'}>Classic Mysteries</Link></li>
+      <li><Link to={'./newmysteries'}>New Mysteries in 2018</Link></li>
+      <li><Link to={'./userSubmissions'}>User Submissions</Link></li>
+      <li><Link to={'./newsubmission'}>Submit Your Own</Link></li>
+    </ul>
   <p className="menu-label">
     Social
   </p>
@@ -32,6 +31,12 @@ const Side = () =>
     <li><Link to={'./chat'}>Chat</Link></li>
     <li><a>Refer a Friend</a></li>
     <li><a>Contact Us</a></li>
+  </ul>
+    <p className="menu-label">
+    More
+  </p>
+  <ul className="menu-list">
+    <li><Link to={'./famous'}>Something Cool</Link></li>
   </ul>
 
 </aside>

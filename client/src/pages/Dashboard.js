@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-class Home extends Component {
+class Dashboard extends Component {
   render() {
     return (
     <div className="hero is-success is-fullheight">
@@ -29,4 +29,4 @@ class Home extends Component {
     );
   }
 }
-export default Home;
+export default Dashboard;
