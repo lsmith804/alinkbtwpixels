@@ -29,14 +29,16 @@ const Side = () =>
   </p>
   <ul className="menu-list">
     <li><Link to={'./chat'}>Chat</Link></li>
-    <li><a>Refer a Friend</a></li>
-    <li><a>Contact Us</a></li>
+    <li><Link to={'./refer'}>Share</Link></li>
+    <li><Link to={'./contact'}>Contact Us</Link></li>
+
+
   </ul>
     <p className="menu-label">
     More
   </p>
   <ul className="menu-list">
-    <li><Link to={'./famous'}>Something Cool</Link></li>
+    <li><Link to={'./somethingcool'}>Something Cool</Link></li>
   </ul>
 
 </aside>

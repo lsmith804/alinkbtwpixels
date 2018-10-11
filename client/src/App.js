@@ -10,7 +10,8 @@ import SomethingCool from './pages/SomethingCool';
 import UserSubmissions from './pages/UserSubmissions';
 import Chat from './pages/Chat';
 import NewSubmission from './pages/NewSubmission';
-import List from './components/List';
+import Refer from './pages/Refer';
+import Contact from './pages/Contact';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
@@ -26,13 +27,15 @@ class App extends Component {
           <Route exact path='/' component={Dashboard}/>
           <Route exact path='/dashboard' component={Dashboard}/>
           <Route exact path='/aboutus' component={AboutUs}/>
-          <Route exact path='/somethingcool' component={SomethingCool}/>
           <Route exact path='/classicmysteries' component={ClassicMysteries}/>
           <Route exact path='/newmysteries' component={NewMysteries}/>
           <Route exact path='/userSubmissions' component={UserSubmissions}/>
-          <Route exact path='/chat' component={Chat}/>
-          <Route exact path='/list' component={List}/>
           <Route exact path='/newsubmission' component={NewSubmission}/>
+          <Route exact path='/chat' component={Chat}/>
+          <Route exact path='/refer' component={Refer}/>
+          <Route exact path='/contact' component={Contact}/>
+          <Route exact path='/somethingcool' component={SomethingCool}/>
+
 
         </Switch>
       </div>
