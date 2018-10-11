@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./classics.json";
 
 class ClassicMysteries extends Component {
   // Initialize the state
@@ -9,17 +10,6 @@ class ClassicMysteries extends Component {
     }
   }
 
-  // Fetch the list on first mount
-  componentDidMount() {
-    this.getArticles();
-  }
-
-  // Retrieves the list of items from the Express app
-  getArticles = () => {
-    console.log("article scraper coming soon");
-    //fetch getarticles
-  }
-
   render() {
     const { list } = this.state;
 
@@ -27,7 +17,11 @@ class ClassicMysteries extends Component {
       <section className="hero is-small is-info is-bold">
       <div className="hero-body">Classic Theories</div>
           <div className="container">
-            CLASSIC mysteries will appear here!
+            <ul>
+              <li>
+                One
+              </li>
+            </ul>
         </div>
   </section>
     );

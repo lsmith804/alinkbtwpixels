@@ -1,0 +1,113 @@
+[
+    {
+        "key": 1,
+        "id": 1,
+        "name": "Ben Drowned",
+        "image": "https://d1u5p3l4wpay3k.cloudfront.net/zelda_gamepedia_en/thumb/0/02/BotW_Link_Shooting_Artwork.png/238px-BotW_Link_Shooting_Artwork.png?version=7965c972d03c93fa6837796a9a0495f0",
+        "selected": false,
+        "clicks": 0
+    
+    
+    },
+
+    {
+        "key": 2,
+        "id": 2,
+        "name":"Link is Dead in Majora's Mask",
+        "image": "http://4.bp.blogspot.com/-oG5VsQHme-I/UOXi7IQp-3I/AAAAAAAALck/ennco4TvYko/s1600/MaskSalesman+(512+x+384).jpg",
+        "selected": false,
+        "clicks": 0
+
+    },
+
+    {
+        "key": 3,
+        "id": 3,
+        "name": "Link is NOT Dead in Majora's Mask",
+        "image":"https://i.ytimg.com/vi/LxTf5hjvOCU/hqdefault.jpg",
+        "selected": false,
+        "clicks": 0
+        
+
+    },
+
+    {
+        "key": 4,
+        "id": 4,
+        "name": "Malon is in cahoots with Skull Kid",
+        "image": "https://d1u5p3l4wpay3k.cloudfront.net/zelda_gamepedia_en/thumb/f/fa/Malon2.png/277px-Malon2.png?version=6c4a4be823b81194eec4bc0a0223fffe",
+        "selected": false,
+        "clicks": 0
+        
+    },
+
+    {
+        "key": 5,
+        "id": 5,
+        "name": "Luigi Resents Mario",
+        "image": "https://i.ytimg.com/vi/UnPf4O8Jt8g/hqdefault.jpg",
+        "selected": false,
+        "clicks": 0
+    },
+
+    {
+        "key": 6,
+        "id": 6,
+        "name": "Lavendar Town: Red is Dead",
+        "image": "https://i.ytimg.com/vi/-XrdR93X7hM/maxresdefault.jpg",
+        "selected": false,
+        "clicks": 0
+        
+    },
+
+    {
+        "key": 7,
+        "id": 7,
+        "name": "Sonic and Time Travel",
+        "image": "https://i.ytimg.com/vi/PAUjZ7yrRYQ/maxresdefault.jpg",
+        "selected": false,
+        "clicks": 0
+        
+    },
+
+    {
+        "key": 8,
+        "id": 8,
+        "name": "Sonic & Scared Geometry",
+        "image": "https://games.9buzzz.com/wp-content/uploads/2018/06/top-10-sonic-fan-theories-850x600.jpg",
+        "selected": false,
+        "clicks": 0
+        
+    },
+
+    {
+        "key": 9,
+        "id": 9,
+        "name": "Sheik is Male: PROOF!",
+        "image": "https://i.ytimg.com/vi/EQbHqSLhkVo/hqdefault.jpg",
+        "selected": false,
+        "clicks": 0
+        
+    },
+
+    {
+        "key": 10,
+        "id": 10,
+        "name": "Is the Cake REALLY a lie?",
+        "image": "https://i.imgur.com/UnI33oI.jpg",
+        "selected": false,
+        "clicks": 0
+        
+    },
+
+    {
+        "key": 11,
+        "id": 11,
+        "name": "CATS Predicted the Fall of Sega",
+        "image": "https://takeoffeveryzig.files.wordpress.com/2011/07/zerowing-cats1-1.jpg",
+        "selected": false,
+        "clicks": 0
+        
+    }   
+
+]

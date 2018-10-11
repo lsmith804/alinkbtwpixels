@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import characters from "../characters.json"
 
 
 let famouspplNames = [];
@@ -27,11 +26,9 @@ class List extends Component {
 
   render() {
     return (
-      <div className="App">
-        {<h1>{famouspplNames}</h1>}
-
-
-      </div>
+      <section>
+        Dunno what to put here yet
+      </section>
     );
   }
 }

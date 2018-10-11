@@ -57,19 +57,19 @@ app.get("/profiles/all", function(req, res){
 
 //Use form to register OR implement discord sign up?
 app.post("/register", function(req,res){
-  var newName = req.body.realname;
+  var newSubject = req.body.subject;
   var newUsername = req.body.username;
-  var newFavoriteGame = req.body.favoriteGame;
-  var newAboutMe = req.body.aboutMe;
+  var newGame = req.body.game;
+  var newEntry = req.body.entry;
   var newPhoto = req.body.photo;
 
   connection.query(
     "INSERT INTO userProfile SET ?",
     {
-      realname: newName,
+      subject: newSubject,
       username: newUsername,
-      favoriteGame: newFavoriteGame,
-      aboutMe: newAboutMe,
+      game: newGame,
+      entry: newEntry,
       photo: newPhoto
     },
     function(err, queryResult) {
