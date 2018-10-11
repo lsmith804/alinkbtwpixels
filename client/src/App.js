@@ -7,7 +7,7 @@ import MyProfile from './pages/MyProfile';
 import ClassicMysteries from './pages/ClassicMysteries';
 import NewMysteries from './pages/NewMysteries';
 import Famous from './components/Famous';
-import Members from './pages/Members';
+import UserTheory from './pages/UserTheory';
 import Chat from './pages/Chat';
 import Register from './pages/Register';
 import List from './components/List';
@@ -29,7 +29,7 @@ class App extends Component {
           <Route exact path='/famous' component={Famous}/>
           <Route exact path='/classicmysteries' component={ClassicMysteries}/>
           <Route exact path='/newmysteries' component={NewMysteries}/>
-          <Route exact path='/members' component={Members}/>
+          <Route exact path='/members' component={UserTheory}/>
           <Route exact path='/chat' component={Chat}/>
           <Route exact path='/list' component={List}/>
           <Route exact path='/register' component={Register}/>

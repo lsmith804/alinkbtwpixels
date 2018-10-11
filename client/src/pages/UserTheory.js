@@ -8,7 +8,7 @@ import "./Members.css";
 
 
 
-class Members extends Component {
+class UserTheory extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -60,7 +60,7 @@ render() {
           <div className="container membas">
           {members.map((item, index) => {
             return(
-              <div className="container">
+              <div key={index} className="container">
                 <div className="tile is-block">
                   <div className="tile-image">
                   <figure className="image is-2by2">
@@ -68,10 +68,10 @@ render() {
                   </figure>
                   </div>
                   <div className="media-content">
-                    <p key={index}>Name: {item.realname}</p>
-                    <p key={index}>Username: {item.username}</p>
-                    <p key={index}>Favorite Game: {item.favoriteGame}</p>
-                    <p key={index}>About: {item.aboutMe}</p>
+                    <p>Name: {item.realname}</p>
+                    <p>Username: {item.username}</p>
+                    <p>Favorite Game: {item.favoriteGame}</p>
+                    <p>About: {item.aboutMe}</p>
                   </div>
                 </div>
                 <hr></hr>
@@ -87,4 +87,4 @@ render() {
   };
 }
 
-export default Members;
+export default UserTheory;

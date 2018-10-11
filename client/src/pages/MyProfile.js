@@ -49,7 +49,24 @@ class MyProfile extends Component {
     return (
 
       <div className="container">
-Helloworld
+
+
+              <div className="container" id="savedProfile">
+        <div className="tile is-block">
+          <div className="tile-image">
+          <figure className="image is-2by2">
+            <div><img src={this.state.photo} style={{width: 100, height: 100}}/></div>
+          </figure>
+          </div>
+          <div className="media-content">
+            <p>Subject: {this.state.subject}</p>
+            <p>Username: {this.state.username}</p>
+            <p>Game: {this.state.game}</p>
+            <p>Entry: {this.state.entry}</p>
+          </div>
+        </div>
+    <hr></hr>
+  </div>
       </div>
     );
   };

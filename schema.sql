@@ -11,8 +11,8 @@ CREATE TABLE userProfile
 	realname varchar(50) NULL,
 	username varchar(50) NULL,
 	favoriteGame varchar(100) NULL,
-	aboutMe varchar(500) NULL,
-    photo varchar(500) NULL,
+	aboutMe varchar(200) NULL,
+    photo varchar(1000) NULL,
 	PRIMARY KEY (id)
 );
 

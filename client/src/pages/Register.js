@@ -3,24 +3,21 @@ import React, { Component } from 'react';
 //import axios from "axios";
 //import List from "./List";
 //import Wrapper from "./Wrapper";
-import "./Members.css";
+import "./Register.css";
 import WidgetBot from '@widgetbot/react-embed'
 import axios from "axios";
-
-
-
-
 
 class Register extends Component {
   constructor(props){
     super(props);
     this.state = {
-      realname: "",
+      subject: "",
       username: "",
-      favoriteGame: "",
-      aboutMe: "",
+      game: "",
+      entry: "",
       photo: ""
-    };
+    }
+    this.baseState=this.state;
   }
 
   handleChange = event => {
@@ -34,10 +31,10 @@ class Register extends Component {
     event.preventDefault();
     if (this.state) {
      axios.post("/register", {
-        realname: this.state.realname,
+        subject: this.state.subject,
         username: this.state.username,
-        favoriteGame: this.state.favoriteGame,
-        aboutMe: this.state.aboutMe,
+        game: this.state.game,
+        entry: this.state.entry,
         photo: this.state.photo
       })
       .then(res => this.state)
@@ -46,20 +43,26 @@ class Register extends Component {
 
   };
 
+  resetForm = event => {
+    event.preventDefault();
+    this.setState(this.baseState);
+  }
+
+
 render() {
   return (
     <div className="section">
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} id="memberForm">
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">Name</label>
+            <label className="label">Subject</label>
           </div>
           <div className="field-body">
             <div className="field">
               <p className="control is-expanded has-icons-left">
-                <input className="input" type="text" placeholder="Name" value={this.state.realname} onChange={this.handleChange} name="realname"></input>
+                <input className="input" type="text" placeholder="What is this about?" value={this.state.subject} onChange={this.handleChange} name="subject"></input>
                 <span className="icon is-small is-left">
-                  <i className="fas fa-user"></i>
+                  <i className="fas fa-file"></i>
                 </span>
               </p>
             </div>
@@ -68,7 +71,7 @@ render() {
             </div>
             <div className="field">
               <p className="control is-expanded has-icons-left">
-                <input className="input" type="text" placeholder="NewPerson123" value={this.state.username} onChange={this.handleChange} name="username"></input>
+                <input className="input" type="text" placeholder="Leave blank to stay anonymous!" value={this.state.username} onChange={this.handleChange} name="username"></input>
                 <span className="icon is-small is-left">
                   <i className="fas fa-headset"></i>
                 </span>
@@ -79,12 +82,12 @@ render() {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">Favorite Game</label>
+            <label className="label">Game</label>
           </div>
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <input className="input" type="text" placeholder="Example: Duckhunt" value={this.state.favoriteGame} onChange={this.handleChange} name="favoriteGame"></input>
+                <input className="input" type="text" placeholder="What game(s) does this involve?" value={this.state.game} onChange={this.handleChange} name="game"></input>
               </div>
             </div>
           </div>
@@ -92,12 +95,12 @@ render() {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">About Me</label>
+            <label className="label">Entry</label>
           </div>
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <textarea className="textarea" placeholder="Tell us about yourself!" value={this.state.aboutMe} onChange={this.handleChange} name="aboutMe"></textarea>
+                <textarea className="textarea" placeholder="Explain your theory, discovery, or findings." value={this.state.entry} onChange={this.handleChange} name="entry"></textarea>
               </div>
             </div>
           </div>
@@ -125,6 +128,10 @@ render() {
                 <button className="button is-primary">
                   Submit
                 </button>
+                <hr></hr>
+                <button className="button is-primary" onClick={this.resetForm}>
+                  Reset
+                </button>
               </div>
             </div>
           </div>
@@ -139,7 +146,7 @@ render() {
             console.log(`Guest signed in as ${user.name}`, user)
             api.emit('sendMessage', 'Hello world')
           })*/
-        }}
+        }
   </div>
   );
   };
