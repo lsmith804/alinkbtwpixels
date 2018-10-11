@@ -1,6 +1,8 @@
 Welcome to Gamging Mysteries!
 
-This is a work in progress. View that progress here: https://gamingmysteries.herokuapp.com/
+Coming Soon ;)
+
+Welcome to your number one source for researching and discussing video game theories! We're dedicated to keeping you up to date with new mysteries as well as providing historical info for newcomers. Created in 2018 by Lori Smith, GM&T was born in the comments sections of MatPat's Game Theory and YuriOfWind's Gaming Mysteries YouTube channels. GM&T was built with long hours of research, redbull, and love. I hope you enjoy using this site.
 
 Technologies Used:
 HTML
@@ -9,5 +11,5 @@ JavaScript
 React
 Node
 Express
-Mongoose
-MongoDB
+SQL
+Discord.js
