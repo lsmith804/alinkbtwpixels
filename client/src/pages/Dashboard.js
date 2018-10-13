@@ -20,14 +20,7 @@ class Dashboard extends Component {
       <div className="hero-head">
         <div className="container has-text-centered">
           <h1>Welcome!</h1>
-
-        
-        <h2>Newcomers:</h2>
-        <ul>
-        <li><img src="https://discordbots.org/api/widget/484402218502455316.svg"></img></li>
-        <li><img src="https://discordbots.org/api/widget/497446442747691018.svg"></img></li>
-        <li><img src="https://discordbots.org/api/widget/497446442747691018.svg"></img></li>
-        </ul>    
+        <iframe src="https://discordapp.com/widget?id=497256090707165184&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
 
       
         </div>
