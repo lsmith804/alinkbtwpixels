@@ -3,51 +3,50 @@
         "key": 1,
         "id": 1,
         "name": "Ben Drowned",
-        "image": "https://d1u5p3l4wpay3k.cloudfront.net/zelda_gamepedia_en/thumb/0/02/BotW_Link_Shooting_Artwork.png/238px-BotW_Link_Shooting_Artwork.png?version=7965c972d03c93fa6837796a9a0495f0",
-        "selected": false,
-        "clicks": 0
-    
-    
+        "image": "https://i.ytimg.com/vi/jcjBzy89_6k/hqdefault.jpg",
+        "summary": "\"Ben Drowned\", also known as the \"Haunted Majora's Mask Theory\", is a well-known story first told by Alex \"Jadusable\" Hall. The story involves a haunted Majora's Mask cartridge that is haunted by the ghost of a boy named Ben. The entire lore was considered just that until September 8, 2010, when Ben was witnessed by users of the Cleverbot chatbot service. Theorists believe that Alex Hall is somehow connected to Cleverbot, and is responsible for manipulating unsuspecting gamers with audio-incuded mind control.",
+        "furtherTitle": "Ben Drowned: Video Evidence",
+        "furtherURL": "https://www.youtube.com/watch?v=6ut5hxLG-ys"
     },
 
     {
         "key": 2,
         "id": 2,
-        "name":"Link is Dead in Majora's Mask",
+        "name":"Is Link Dead in Majora's Mask?",
         "image": "http://4.bp.blogspot.com/-oG5VsQHme-I/UOXi7IQp-3I/AAAAAAAALck/ennco4TvYko/s1600/MaskSalesman+(512+x+384).jpg",
-        "selected": false,
-        "clicks": 0
-
+        "summary": "Is the storyline of LOZ: Majora's Mask one big trip through purgatory? A frequently discussed topic since the game's initial release in April of 2000, conversation sparked again after Game Theory's MatPat posted a video on the subject in late 2013. Other YouTubers have followed suit, offering their own interpretations and even pointing to quotes from creator Eiji Aonuma.",
+        "furtherTitle": "Zelda Theory: Is Link Dead in MM? In Depth Narration by RMFH.",
+        "furtherURL": "https://www.youtube.com/watch?v=LxTf5hjvOCU"
     },
 
     {
         "key": 3,
         "id": 3,
-        "name": "Link is NOT Dead in Majora's Mask",
-        "image":"https://i.ytimg.com/vi/LxTf5hjvOCU/hqdefault.jpg",
-        "selected": false,
-        "clicks": 0
-        
-
+        "name": "Various Five Nights at Freddy's Theories",
+        "image":"https://i.ytimg.com/vi/vD4Di2PlbjM/maxresdefault.jpg",
+        "summary": "FNAF has exploded in popularity in recent years. Creator Scott Cawthon hides easter eggs, secrets, and clues to characters' backstories in every game. The series has also expanded to include a book series which deepens the lore further. Who is \"Purple Guy\" anyway?",
+        "furtherTitle": "Five Nights At Freddy's Fan Theories So Crazy They Might Be True",
+        "furtherURL": "https://www.thegamer.com/five-nights-at-freddys-15-fan-theories-so-crazy-they-might-be-true/"
     },
 
     {
         "key": 4,
         "id": 4,
-        "name": "Malon is in cahoots with Skull Kid",
-        "image": "https://d1u5p3l4wpay3k.cloudfront.net/zelda_gamepedia_en/thumb/f/fa/Malon2.png/277px-Malon2.png?version=6c4a4be823b81194eec4bc0a0223fffe",
-        "selected": false,
-        "clicks": 0
-        
+        "name": "Skull Kid is a Genius/Prophet",
+        "image": "https://1d31c772ec21a65b0a71-0707aae3004193da193e1ad4a942592d.ssl.cf2.rackcdn.com/19264/skull_kid_up_close__medium.jpg",
+        "summary": "Majora's Mask is likely to show up multiple times in any list of popular video game theories, and that's also true here. MM is filled with so much metaphorical imagery and genuine creepiness, it's hard not to wonder \"What's really going on here?\". The Skull Kid as a prophet theory gained traction in recent years as fans were able to dig more into the code of the re-release of MM for the 3DS.",
+        "furtherTitle": "Majora's Mask Theory: Skull Kid, the Rejected Prophet",
+        "furtherURL": "https://www.gamnesia.com/articles/majoras-mask-theory-skull-kid-the-rejected-prophet"    
     },
 
     {
         "key": 5,
         "id": 5,
-        "name": "Luigi Resents Mario",
+        "name": "Luigi Hates Mario",
         "image": "https://i.ytimg.com/vi/UnPf4O8Jt8g/hqdefault.jpg",
-        "selected": false,
-        "clicks": 0
+        "summary": "Luigi has lived in Mario's shadow for over three decades. After witnessing the taller brother getting the short end of the stick for so long, many gamers agree that Luigi has now shows signs of resentment.",
+        "furtherTitle": "15 Darkest Super Mario Theories Fans Will Hate",
+        "furtherURL": "https://screenrant.com/dark-super-mario-fan-theories/"
     },
 
     {
@@ -55,59 +54,29 @@
         "id": 6,
         "name": "Lavendar Town: Red is Dead",
         "image": "https://i.ytimg.com/vi/-XrdR93X7hM/maxresdefault.jpg",
-        "selected": false,
-        "clicks": 0
-        
+        "summary": "Lavendar Town is a location in the first Pokemon Gamebody series. The in-game location features a creepy aesthetic that is jarringly different from other kid-friendly areas in the game. Lavendar Town even has a Pokemon cemetary that the player must explore as a part of the main storyline. The soundtrack is especially infamous, as it is thought to induce \"Lavendar Town Syndrome\" in some players. Some have even gone so far as to explain their experience with the song and report feelings of nervousness paranoia, and possible lapses in consciousness.",
+        "furtherTitle": "An Experience with the Lavendar Town Syndrome",
+        "furtherURL": "http://someordinarygamers.wikia.com/wiki/An_Experience_with_the_Lavender_Town_Syndrome" 
     },
 
     {
         "key": 7,
         "id": 7,
-        "name": "Sonic and Time Travel",
-        "image": "https://i.ytimg.com/vi/PAUjZ7yrRYQ/maxresdefault.jpg",
-        "selected": false,
-        "clicks": 0
-        
+        "name": "Is the Cake REALLY a lie?",
+        "image": "https://i.imgur.com/UnI33oI.jpg",
+        "summary": "Despite being told various times during playthroughts of Portal, the cake can clearly be seen along with the Companion Cube. How is the Companion Cube present when it was clearly murdered by GLaDOS earlier in the game? These inconsistencies have lead gamers to devise their own theories about the hidden meanings of this phrase.",
+        "furtherTitle": "The cake is a lie! ... Or is it?",
+        "furtherURL": "https://steamcommunity.com/app/400/discussions/0/616187839144850373/"
     },
 
     {
         "key": 8,
         "id": 8,
-        "name": "Sonic & Scared Geometry",
-        "image": "https://games.9buzzz.com/wp-content/uploads/2018/06/top-10-sonic-fan-theories-850x600.jpg",
-        "selected": false,
-        "clicks": 0
-        
-    },
-
-    {
-        "key": 9,
-        "id": 9,
-        "name": "Sheik is Male: PROOF!",
-        "image": "https://i.ytimg.com/vi/EQbHqSLhkVo/hqdefault.jpg",
-        "selected": false,
-        "clicks": 0
-        
-    },
-
-    {
-        "key": 10,
-        "id": 10,
-        "name": "Is the Cake REALLY a lie?",
-        "image": "https://i.imgur.com/UnI33oI.jpg",
-        "selected": false,
-        "clicks": 0
-        
-    },
-
-    {
-        "key": 11,
-        "id": 11,
-        "name": "CATS Predicted the Fall of Sega",
+        "name": "Zero Wing's CATS Predicted Terrorist Attacks on the US",
         "image": "https://takeoffeveryzig.files.wordpress.com/2011/07/zerowing-cats1-1.jpg",
-        "selected": false,
-        "clicks": 0
-        
+        "summary": "Deemed a farfetched theory by many, some have noticed that lines from the poorly translated game Zero Wing seem to include messages that foretell the terrorist attacks of 9/11. The theory has been removed from Wikipedia in the past, but notes can still be found in All Your Base Are Belong To Us archive.",
+        "furtherTitle": "All Your Base Are Belong to Us: Wikipedia Archives",
+        "furtherURL": "https://en.wikipedia.org/wiki/Talk%3AAll_your_base_are_belong_to_us/Archive_2"
     }   
 
 ]

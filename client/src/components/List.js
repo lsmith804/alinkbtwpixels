@@ -1,23 +1,24 @@
 import React from "react";
 
 const List = props => (
-  <div className="card">
+  <div className="column is-10 is-offset-2">
     <div className="img-container">
-      <img alt={props.name} src={props.image} />
+      <img alt={props.name} src={props.image} style={{width: 200, height: 200}} />
     </div>
-    <div className="content">
+    <div id="classicCard">
       <ul>
         <li>
           <strong>Name:</strong> {props.name}
         </li>
         <li>
-          <strong>Occupation:</strong> {props.occupation}
+          <strong>Summary:</strong> {props.summary}
         </li>
         <li>
-          <strong>Location:</strong> {props.location}
+          <strong>Further Reading:</strong><a href={props.furtherURL}> {props.furtherTitle}  </a>
         </li>
       </ul>
     </div>
+    <hr></hr>
 
   </div>
 );
