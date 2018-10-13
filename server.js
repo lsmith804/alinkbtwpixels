@@ -51,6 +51,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+
+
 //API ROUTES
 //Usersubmitted entry profiles
 app.get("/profiles/all", function(req, res){
