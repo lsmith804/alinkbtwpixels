@@ -1,21 +1,13 @@
-### Schema
-DROP DATABASE IF EXISTS profile_db;
-
-CREATE DATABASE profile_db;
-
-USE profile_db;
-
-CREATE TABLE userProfile
-(
-	id int NOT NULL AUTO_INCREMENT,
-	subject varchar(50) NULL,
+CREATE TABLE entries (
+	id INT AUTO_INCREMENT NOT NULL,
+    description VARCHAR (255),
+    createdAt TIMESTAMP NOT NULL,
+    subject varchar(50) NULL,
 	username varchar(50) NULL,
 	game varchar(100) NULL,
 	entry varchar(1000) NULL,
     photo varchar(1000) NULL,
-	PRIMARY KEY (id)
+    PRIMARY KEY(id)
 );
 
-SELECT * FROM userProfile;
-
-
+SELECT * FROM entries;
