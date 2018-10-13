@@ -20,16 +20,14 @@ class Contact extends Component {
                 <h1 class="title">
                   Contact Us
                 </h1>
-                <h1 class="subtitle">
-                  Holla
-                </h1>
+                <ul>
+                  <li><a href="emailto:lori.smith@richmond.edu"><i class="fas fa-envelope fa-4x"></i>  Email Us</a></li>
+                  <li><a href="https://www.linkedin.com/in/lori-smith-a5a67517/"><i class="fab fa-linkedin fa-4x"></i>  LinkedIn</a></li>
+
+                  
+                </ul>
             </div>
           </div>
-          <ul>
-            <li>Email</li>
-            <li>Discord Direct Message</li>
-            <li>Linked In</li>
-          </ul>
         </section>             
       </div>
     );

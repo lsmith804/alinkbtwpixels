@@ -22,10 +22,9 @@ class Refer extends Component {
                 </h1>
             </div>
             <ul>
-            <li><i class="fab fa-facebook-square fa-5x"></i></li>
-            <li><i class="fab fa-facebook-messenger fa-5x"></i></li>
-            <li><i class="fab fa-twitter-square fa-5x"></i></li>
-            <li><i class="far fa-share-square fa-5x"></i></li>
+            <li><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fgamingmysteries.herokuapp.com&layout=button&size=large&mobile_iframe=true&width=73&height=28&appId" width="73" height="28" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></li>
+            <li><i class="fab fa-twitter-square fa-3x"></i></li>
+            <li><i class="far fa-share-square fa-3x"></i></li>
           </ul>    
           </div>
         </section>             
