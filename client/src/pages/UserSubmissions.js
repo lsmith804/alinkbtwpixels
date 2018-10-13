@@ -13,7 +13,7 @@ class UserSubmissions extends Component {
   //Mount component
   componentDidMount(){
     this.getMembers();
-    console.log("Members loaded");
+    console.log("User theories loaded");
   }
 
   //What does "getMembers do?" This! Gets all books

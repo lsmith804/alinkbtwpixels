@@ -1,35 +1,41 @@
 import React, { Component } from 'react';
+const bodyParser = require("body-parser");
+const logger = require("morgan");
+
 
 class NewMysteries extends Component {
   // Initialize the state
   constructor(props){
     super(props);
     this.state = {
-      list: []
+      articles: []
     }
   }
 
   // Fetch the list on first mount
   componentDidMount() {
-    this.getArticles();
+  
+    console.log("New Mysteries component loaded.");
   }
 
-  // Retrieves the list of items from the Express app
-  getArticles = () => {
-    console.log("article scraper coming soon");
-    //fetch getarticles
-  }
 
   render() {
-    const { list } = this.state;
+    const { articlesListTwo } = this.state;
 
     return (
-      <section className="hero is-small is-info is-bold">
-      <div className="hero-body">New in 2018</div>
-          <div className="container">
-            NEW/trending theories will appear here!
+      <section>
+        <div className="hero is-small is-info is-bold">
+          <div className="hero-body">New & Trending</div>
+            <iframe id="embededSite" src="http://www.reddit.com" width="100%" height="100%" >
+              <p>Your browser does not support iframes.</p>
+            </iframe>
         </div>
-  </section>
+        <div id="entries" className="column is-centered">
+        
+
+
+        </div>
+      </section>
     );
   }
 }

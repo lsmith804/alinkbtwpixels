@@ -3,10 +3,14 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 var logger = require("morgan");
-var cheerio = require("cheerio");
+var request = require("request");
 const Discord = require("discord.js");
+const axios = require("axios");
 require('dotenv').config()
 const token = process.env.DISCORD_BOT_SECRET;
+const igdb = require('igdb-api-node').default;
+
+const IGDB_KEY = process.env.IGDB_SECRET;
 const connection = require("./connection");
 
 
@@ -30,10 +34,33 @@ bot.on('ready', () => {
 
 bot.login(token);
 
-///////////////////////////////////////
+//IGDB Setup
+//https://api-endpoint.igdb.com
+
+
+  
 
 //Initialize express
 const app = express();
+
+app.get("/list", (req,res) => {
+
+  axios.get("https://api-endpoint.igdb.com/games/1942?fields=*", {
+    headers: {
+      "user-key": IGDB_KEY,
+      Accept: "application/json"
+    }
+  })
+  .then(response => {
+    // Do work here
+    console.log(response.data);
+    res.json(response.data);
+  })
+  .catch(e => {
+    console.log("error", e);
+  });
+
+});
 
 //Logger for logging HTTP requests.
 app.use(logger("dev"));
@@ -46,7 +73,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Define API routes here
+//API ROUTES
 app.get("/profiles/all", function(req, res){
   connection.query("SELECT * FROM userProfile", function(err, result){
     if (err) console.log ("couldnt get the profiles!");
@@ -55,7 +82,7 @@ app.get("/profiles/all", function(req, res){
   });
 });
 
-//Use form to register OR implement discord sign up?
+//Route for posting new entrirs to mystery/theory DB
 app.post("/register", function(req,res){
   var newSubject = req.body.subject;
   var newUsername = req.body.username;
@@ -89,6 +116,8 @@ app.get("/list", (req,res) => {
   var menu = ["item1", "item2", "item3"];
   res.json(menu);
 });
+
+
 
 // Send every other request to the React app & define any API routes before this runs
 app.get("*", (req, res) => {
