@@ -1,0 +1,5 @@
+INSERT INTO userprofile (subject, username, game, entry, photo) VALUES ("The Dolly Knocker", "LonLonRancher", "Zelda", "Do yall remember the Dolly Knocker from Kakariko Forest? Not many people do. Rumor has it that...", "https://images-na.ssl-images-amazon.com/images/I/81lMBhrc%2BAL._SX425_.jpg");
+INSERT INTO userprofile (subject, username, game, entry, photo) VALUES ("Connor is Hank's late son?", "ConnorBOT", "Detroit: Become Human", "Connor was created as a comfort aid to Lt. Hank Anderson. Evidence of this can be found in Chapter 4, Part 2 when Hank and Connor go to...", "http://i.ytimg.com/vi/SKRWhJv0C_s/mqdefault.jpg");
+INSERT INTO userprofile (subject, username, game, entry, photo) VALUES ("Leroy Jenkins", "Leeroy Jenkins is REAL", "World of Warcraft", "Leeroy's main quote about enjoying chicken and PC gaming is a clear indicator of his genuine personality. Even moreso, his desire to get right into the game is...", "https://www.blogcdn.com/wow.joystiq.com/media/2007/03/709274.0.jpg");
+
+SELECT * FROM userprofile;

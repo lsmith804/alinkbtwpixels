@@ -51,12 +51,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
-
 //API ROUTES
 //Usersubmitted entry profiles
 app.get("/profiles/all", function(req, res){
-  connection.query("SELECT * FROM userProfile", function(err, result){
+  connection.query("SELECT * FROM userprofile", function(err, result){
     if (err) console.log ("couldnt get the profiles!");
     res.json({ data: result });
     const json = JSON.stringify(res.json);
