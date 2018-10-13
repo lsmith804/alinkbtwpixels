@@ -3,7 +3,7 @@ import "../Top";
 import "./Top.css";
 
 
-const Top = props =>
+const Top = () =>
 <section className="hero is-bold is-small" id="bannerbackground">
   <div className="hero-body">
       <h1 className="title" id="siteheader">

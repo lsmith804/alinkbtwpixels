@@ -12,6 +12,8 @@ const igdb = require('igdb-api-node').default;
 
 const IGDB_KEY = process.env.IGDB_SECRET;
 const connection = require("./connection");
+const JSON = require('circular-json');
+
 
 
 //Commando Bot -Deprecated
@@ -34,33 +36,9 @@ bot.on('ready', () => {
 
 bot.login(token);
 
-//IGDB Setup
-//https://api-endpoint.igdb.com
-
-
-  
 
 //Initialize express
 const app = express();
-
-app.get("/list", (req,res) => {
-
-  axios.get("https://api-endpoint.igdb.com/games/1942?fields=*", {
-    headers: {
-      "user-key": IGDB_KEY,
-      Accept: "application/json"
-    }
-  })
-  .then(response => {
-    // Do work here
-    console.log(response.data);
-    res.json(response.data);
-  })
-  .catch(e => {
-    console.log("error", e);
-  });
-
-});
 
 //Logger for logging HTTP requests.
 app.use(logger("dev"));
@@ -74,11 +52,31 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //API ROUTES
+//Usersubmitted entry profiles
 app.get("/profiles/all", function(req, res){
   connection.query("SELECT * FROM userProfile", function(err, result){
     if (err) console.log ("couldnt get the profiles!");
     res.json({ data: result });
-    console.log(res);
+    const json = JSON.stringify(res.json);
+    console.log(json);
+  });
+});
+
+//Get popular games from IGDB
+app.get("/populargames", (req,res) => {
+
+  axios.get("https://api-endpoint.igdb.com/games/?fields=name,popularity&order=popularity:desc", {
+    headers: {
+      "user-key": IGDB_KEY,
+      Accept: "application/json"
+    }
+  })
+  .then(response => {
+    //console.log(response.data);
+    res.json(response.data);  //Peep in browser @ 3001/populargames
+  })
+  .catch(e => {
+    console.log("error", e);
   });
 });
 

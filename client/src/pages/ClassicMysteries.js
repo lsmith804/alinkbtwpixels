@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
 import "./classics.json";
+import List from "../components/List";
+import classics from "./classics.json";
 
 class ClassicMysteries extends Component {
-  // Initialize the state
-  constructor(props){
-    super(props);
-    this.state = {
-      list: []
-    }
-  }
+  state = { classics };
 
+
+  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
-    const { list } = this.state;
-
     return (
-      <section className="hero is-small is-info is-bold">
-      <div className="hero-body">Classic Theories</div>
-          <div className="container">
-            <ul>
-              <li>
-                One
-              </li>
-            </ul>
-        </div>
-  </section>
+      <div className="container">
+        <h2>Classics List</h2>
+        {this.state.classics.map(classic => (
+          <List
+            id={classic.id}
+            key={classic.id}
+            name={classic.name}
+            image={classic.image}
+          />
+        ))}
+      </div>
     );
   }
-}
+
+};
+
+
+
+
 
 export default ClassicMysteries;

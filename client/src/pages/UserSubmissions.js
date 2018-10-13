@@ -16,7 +16,7 @@ class UserSubmissions extends Component {
     console.log("User theories loaded");
   }
 
-  //What does "getMembers do?" This! Gets all books
+  //Collect all user submissons
   getMembers = async () => {
     const res = await fetch("/profiles/all")
     const members = await res.json()
