@@ -124,12 +124,12 @@ render() {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <button className="button is-primary">
+                <button className="button is-success">
                   Submit
                 </button>
                 <hr></hr>
                 <p>Changed your mind?</p>
-                <button className="button is-primary" onClick={this.resetForm}>
+                <button className="button is-warning" onClick={this.resetForm}>
                   Reset
                 </button>
               </div>

@@ -10,6 +10,7 @@ const connection = require("./connection");
 
 const Discord = require("discord.js");
 const token = process.env.DISCORD_BOT_SECRET;
+const keep_alive = require('./keep_alive.js')
 const reply = require("./reply.json");
 
 const igdb = require('igdb-api-node').default;
@@ -19,20 +20,8 @@ const JSON = require('circular-json');
 //const WIT_KEY = process.env.WIT_KEY;
 //const witai = new Wit ({ accessToken: WIT_KEY })
 
-
-
-//Commando Bot -Deprecated
-//const commando = require("discord.js-commando");
-
 //DiscordBOT
 const bot = new Discord.Client();
-
-// bot.on('message', (message) => {
-//  if (message.content == "Hello"){
-//    message.reply("My name is Connor, I'm the android sent by Cyberlife."); 
-//  }
-// });
-
 bot.on('message', (message) => {
   message.content.split(" ");
   
@@ -81,7 +70,7 @@ if (process.env.NODE_ENV === "production") {
 //Usersubmitted entry profiles
 app.get("/profiles/all", function(req, res){
   connection.query("SELECT * FROM userprofile", function(err, result){
-    if (err) console.log ("couldnt get the profiles!");
+    if (err) console.log ("Could not get SQL data.");
     res.json({ data: result });
     const json = JSON.stringify(res.json);
     console.log(json);
@@ -99,7 +88,8 @@ app.get("/populargames", (req,res) => {
   })
   .then(response => {
     //console.log(response.data);
-    res.json(response.data);  //Peep in browser @ 3001/populargames
+    //res.json(response.data);  //Peep json in browser @ 3001/populargames
+    res.json({stuff: response.data});  //Peep json in browser @ 3001/populargames
   })
   .catch(e => {
     console.log("error", e);

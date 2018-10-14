@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import List from "../components/List";
-
+import Axios from 'axios';
 
 //Dashboard/welcome area of useful info. Popular games, hello from bot, etc
 
-
-
 class Dashboard extends Component {
-  
+  constructor(props){
+    super(props);
+      this.state = {
+        popular: []
+      }
+  }
+
   componentDidMount(){
+    this.getPopular();
     console.log("Dash Loaded!");
   }
 
+  getPopular = async () => {
+    const res = await fetch("/populargames")
+    const popular = await res.json()
+    this.setState({ popular: popular.data})
+  };
+
   render() {
+    const { popular } = this.state;
+
 
     return (
     <div className="hero is-success is-fullheight">
@@ -25,6 +37,28 @@ class Dashboard extends Component {
             <p>Chat with friends and our helpful chatbots <Link to={'./chat'}>here!</Link></p>
         </div>
       </div>
+
+      {/*Display most popular current games  */}
+    {/*  <div className="column is-10 is-offset-2">
+
+            {popular.map((item, index) => {
+              return(
+                <div key={item.index} className="is-clipped">
+                  <div className="card">
+                    <div className="media-content">
+                      <p>Game: {item.name}</p>
+                      <p>Pop: {item.popularity}</p>
+                    </div>
+                  </div>
+                  <hr></hr>
+                </div>
+              );
+            })}
+
+            </div>*/}
+      
+      
+      
 
     </div>
     );

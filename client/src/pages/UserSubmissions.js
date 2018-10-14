@@ -10,7 +10,6 @@ class UserSubmissions extends Component {
     }
   }
 
-  //Mount component
   componentDidMount(){
     this.getMembers();
     console.log("User theories loaded");
