@@ -10,8 +10,17 @@ const connection = require("./connection");
 
 const Discord = require("discord.js");
 const token = process.env.DISCORD_BOT_SECRET;
-const keep_alive = require('./keep_alive.js')
 const reply = require("./reply.json");
+const keep_alive = require("./keep_alive")
+
+const CleverBot = require("cleverbot-node");
+const client = new Discord.Client();
+const clbot =  new CleverBot;
+clbot.configure({ botapi: process.env.I_AM_KEY});
+// cleverbot.write(cleverMessage, function (response) {
+//   console.log(response.output);
+// });
+
 
 const igdb = require('igdb-api-node').default;
 const IGDB_KEY = process.env.IGDB_SECRET;
@@ -20,36 +29,47 @@ const JSON = require('circular-json');
 //const WIT_KEY = process.env.WIT_KEY;
 //const witai = new Wit ({ accessToken: WIT_KEY })
 
-//DiscordBOT
-const bot = new Discord.Client();
-bot.on('message', (message) => {
-  message.content.split(" ");
-  
-  message.content = message.content.toLowerCase().concat(); //Ignore case & lower
-  if (message.author.bot){  //Prevent bot from talking to himself
+//Bot Message handling
+client.on('message', (message) => {
+  console.log(message.author);
+  if (message.author.id === "497446442747691018" ){  //Prevent bot from talking to himself
     return;
   }
-  if (reply[message.content]){
-    message.channel.send(reply[message.content]); 
-  }else{
-    var messagesplit = message.content.split(" ")
+  clbot.write(message.content, (response) => {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send(response.output).catch(console.error);
+      message.channel.stopTyping();
+    }, Math.random() * (1 - 3) + 1 * 1000);
+  });
 
-    for (var i = 0; i < messagesplit.length; i++){
-    if (messagesplit[i] === (reply[message.content]) ||
-      messagesplit[i] === ("what?") ||
-      messagesplit[i] === ("wut?")) {
-        message.channel.send("LOL WHO KNOWS?");  
-      }
-    }
-  }
+  // message.content.split(" ");
+  
+  // message.content = message.content.toLowerCase().concat(); //Ignore case & lower
+  // if (message.author.bot){  //Prevent bot from talking to himself
+  //   return;
+  // }
+  // if (reply[message.content]){
+  //   message.channel.send(reply[message.content]); 
+  // }else{
+  //   var messagesplit = message.content.split(" ")
+
+  //   for (var i = 0; i < messagesplit.length; i++){
+  //   if (messagesplit[i] === (reply[message.content]) ||
+  //     messagesplit[i] === ("what?") ||
+  //     messagesplit[i] === ("wut?")) {
+  //       message.channel.send("LOL WHO KNOWS?");  
+  //     }
+  //   }
+  // }
  });
 
-bot.on('ready', () => {
+client.on('ready', () => {
   console.log('ConnorBOT is alive!');
-  bot.user.setActivity('DBH');
+  client.user.setActivity('DBH');
 });
 
-bot.login(token);
+client.login(token);
 
 
 //Initialize express
