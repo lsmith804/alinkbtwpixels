@@ -1,18 +1,23 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const axios = require("axios");
+require('dotenv').config()
 const PORT = process.env.PORT || 3001;
 var logger = require("morgan");
 var request = require("request");
-const Discord = require("discord.js");
-const axios = require("axios");
-require('dotenv').config()
-const token = process.env.DISCORD_BOT_SECRET;
-const igdb = require('igdb-api-node').default;
-
-const IGDB_KEY = process.env.IGDB_SECRET;
 const connection = require("./connection");
+
+const Discord = require("discord.js");
+const token = process.env.DISCORD_BOT_SECRET;
+const reply = require("./reply.json");
+
+const igdb = require('igdb-api-node').default;
+const IGDB_KEY = process.env.IGDB_SECRET;
+
 const JSON = require('circular-json');
+//const WIT_KEY = process.env.WIT_KEY;
+//const witai = new Wit ({ accessToken: WIT_KEY })
 
 
 
@@ -21,13 +26,34 @@ const JSON = require('circular-json');
 
 //DiscordBOT
 const bot = new Discord.Client();
+
+// bot.on('message', (message) => {
+//  if (message.content == "Hello"){
+//    message.reply("My name is Connor, I'm the android sent by Cyberlife."); 
+//  }
+// });
+
 bot.on('message', (message) => {
- if (message.content == "Hello"){
-   message.reply("My name is Connor, I'm the android sent by Cyberlife."); 
-   //TO reply simply w/o the Mention
-   //message.channel.sendMessage("pong2");
- }
-});
+  message.content.split(" ");
+  
+  message.content = message.content.toLowerCase().concat(); //Ignore case & lower
+  if (message.author.bot){  //Prevent bot from talking to himself
+    return;
+  }
+  if (reply[message.content]){
+    message.channel.send(reply[message.content]); 
+  }else{
+    var messagesplit = message.content.split(" ")
+
+    for (var i = 0; i < messagesplit.length; i++){
+    if (messagesplit[i] === (reply[message.content]) ||
+      messagesplit[i] === ("what?") ||
+      messagesplit[i] === ("wut?")) {
+        message.channel.send("LOL WHO KNOWS?");  
+      }
+    }
+  }
+ });
 
 bot.on('ready', () => {
   console.log('ConnorBOT is alive!');

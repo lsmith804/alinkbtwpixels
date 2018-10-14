@@ -19,10 +19,10 @@ class Dashboard extends Component {
     <div className="hero is-success is-fullheight">
       <div className="hero-head">
         <div className="container has-text-centered">
-          <h1>Welcome!</h1>
-        <iframe src="https://discordapp.com/widget?id=497256090707165184&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-
-      
+          <h1 className="title">Welcome!</h1>
+          <h2 className="subtitle">A Link Between Pixels is your place to chat, read up on current gaming theory news, and post your own findings.</h2>
+            <iframe src="https://discordapp.com/widget?id=497256090707165184&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+            <p>Chat with friends and our helpful chatbots <Link to={'./chat'}>here!</Link></p>
         </div>
       </div>
 
