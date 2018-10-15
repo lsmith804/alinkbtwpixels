@@ -91,7 +91,7 @@ if (process.env.NODE_ENV === "production") {
 //API ROUTES
 //Usersubmitted entry profiles
 app.get("/profiles/all", function(req, res){
-  connection.query("SELECT * FROM userprofile", function(err, result){
+  connection.query("SELECT * FROM entries", function(err, result){
     if (err) console.log ("Could not get SQL data.");
     res.json({ data: result });
     const json = JSON.stringify(res.json);
@@ -127,7 +127,7 @@ app.post("/register", function(req,res){
   var newPhoto = req.body.photo;
 
   connection.query(
-    "INSERT INTO userprofile SET ?",
+    "INSERT INTO entries SET ?",
     {
       subject: newSubject,
       username: newUsername,
