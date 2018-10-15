@@ -127,7 +127,7 @@ app.post("/register", function(req,res){
   var newPhoto = req.body.photo;
 
   connection.query(
-    "INSERT INTO userProfile SET ?",
+    "INSERT INTO userprofile SET ?",
     {
       subject: newSubject,
       username: newUsername,
