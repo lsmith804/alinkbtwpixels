@@ -10,6 +10,7 @@ const connection = require("./connection");
 
 const Discord = require("discord.js");
 const token = process.env.DISCORD_BOT_SECRET;
+const BEN_ID = process.env.BEN_ID;
 const reply = require("./reply.json");
 const keep_alive = require("./keep_alive")
 
@@ -31,8 +32,8 @@ const JSON = require('circular-json');
 
 //Bot Message handling
 client.on('message', (message) => {
-  console.log(message.author);
-  if (message.author.id === "497446442747691018" ){  //Prevent bot from talking to himself
+  //console.log(message.author);
+  if (message.author.id === BEN_ID){  //Prevent bot from talking to himself
     return;
   }
   clbot.write(message.content, (response) => {
@@ -43,10 +44,11 @@ client.on('message', (message) => {
     }, Math.random() * (1 - 3) + 1 * 1000);
   });
 
+  //USING PRE-SCRIPTED COMMANDS ///////////////////////////
   // message.content.split(" ");
   
   // message.content = message.content.toLowerCase().concat(); //Ignore case & lower
-  // if (message.author.bot){  //Prevent bot from talking to himself
+  // if (message.author.id === "497446442747691018"){  //Prevent bot from talking to himself
   //   return;
   // }
   // if (reply[message.content]){
@@ -65,8 +67,8 @@ client.on('message', (message) => {
  });
 
 client.on('ready', () => {
-  console.log('ConnorBOT is alive!');
-  client.user.setActivity('DBH');
+  console.log('BOT is alive!');
+  client.user.setActivity(`Majora's Mask`);
 });
 
 client.login(token);

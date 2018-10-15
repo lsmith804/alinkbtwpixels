@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Axios from 'axios';
+//import Axios from 'axios';
+import "./Dashboard.css";
 
 //Dashboard/welcome area of useful info. Popular games, hello from bot, etc
 
@@ -13,22 +14,24 @@ class Dashboard extends Component {
   }
 
   componentDidMount(){
-    this.getPopular();
+    //this.getPopular();
     console.log("Dash Loaded!");
   }
 
-  getPopular = async () => {
-    const res = await fetch("/populargames")
-    const popular = await res.json()
-    this.setState({ popular: popular.data})
-  };
+  // getPopular = async () => {
+  //   const res = await fetch("/populargames")
+  //   const popular = await res.json()
+  //   this.setState({ popular: popular.data})
+  // };
 
   render() {
-    const { popular } = this.state;
+    {/*const { popular } = this.state; */}
 
 
     return (
-    <div className="hero is-success is-fullheight">
+    <div className="hero is-fullheight">
+
+
       <div className="hero-head">
         <div className="container has-text-centered">
           <h1 className="title">Welcome!</h1>
@@ -56,11 +59,7 @@ class Dashboard extends Component {
             })}
 
             </div>*/}
-      
-      
-      
-
-    </div>
+          </div>
     );
   }
 }
