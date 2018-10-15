@@ -1,6 +1,9 @@
+CREATE DATABASE entries_db;
+
+USE entries_db;
+
 CREATE TABLE entries (
 	id INT AUTO_INCREMENT NOT NULL,
-    description VARCHAR (255),
     createdAt TIMESTAMP NOT NULL,
     subject varchar(50) NULL,
 	username varchar(50) NULL,

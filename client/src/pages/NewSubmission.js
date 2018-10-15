@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 //import axios from "axios";
-//import List from "./List";
-//import Wrapper from "./Wrapper";
 import "./NewSubmission.css";
 import WidgetBot from '@widgetbot/react-embed'
 import axios from "axios";
@@ -14,21 +13,23 @@ class NewSubmission extends Component {
       username: "",
       game: "",
       entry: "",
-      photo: ""
+      photo: "",
+      disabled: true
     }
     this.baseState=this.state;
   }
 
   handleChange = event => {
+    this.state.disabled = false;
     const {name, value} = event.target
     this.setState({
-      [name]: value,
+      [name]: value
     });
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    if (this.state) {
+    if (!this.state) {
      axios.post("/register", {
         subject: this.state.subject,
         username: this.state.username,
@@ -37,14 +38,16 @@ class NewSubmission extends Component {
         photo: this.state.photo
       })
       .then(res => this.state)
-      .then(alert(`New user ${this.state.username} Saved!`));
+      .then(alert(`New entry ${this.state.subject} Saved!`));
     }
 
   };
 
   resetForm = event => {
     event.preventDefault();
-    this.setState(this.baseState);
+    this.setState(this.baseState)
+    this.state.disabled = true;
+
   }
 
 
@@ -124,9 +127,9 @@ render() {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <button className="button is-success">
-                  Submit
-                </button>
+                {/* <Link to={'./userSubmissions'}> */}
+                <button className="button is-success" disabled={this.state.disabled}>Submit</button>
+                {/* </Link> */}
                 <hr></hr>
                 <p>Changed your mind?</p>
                 <button className="button is-warning" onClick={this.resetForm}>
