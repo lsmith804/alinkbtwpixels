@@ -5,19 +5,14 @@ import "./Splash.css";
 class Splash extends Component {
 
   componentDidMount(){
-    //this.getPopular();
     console.log("Dash Loaded!");
   }
-
-
 
   render() {
     return (
     <div className="hero is-fullheight has-bg-img" id="splash">
-        <div className="hero-body">
             <div className="container has-text-centered">
-            <h1 class="title">Welcome!</h1>
-
+            <h1 class="title" id="return">Returning User?</h1>
             <div class="field">
             <p class="control has-text-centered">
             <i class="fab fa-discord fa-2x"></i>  <input class="input" type="email" placeholder="Email" style={{width: 300}}></input>
@@ -31,11 +26,7 @@ class Splash extends Component {
             </div>      
 
             <Link to={'./dashboard'}><button class="button">Enter</button></Link>
-
-            
-
             </div>
-        </div>
     </div>
     );
   }

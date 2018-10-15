@@ -1,8 +1,19 @@
+/* aside {
+    display: none;
+}
+*/
+
+#return {
+    color: limegreen;
+    text-shadow: 2px 2px white;
+    
+}
+
 #splash {
-    background-image: url("../images/controller-2618897_1920.jpg");
+    background-image: url("../images/minecraft.png");
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-color: #999;
-    color: aliceblue;
+    color: white;
 };
