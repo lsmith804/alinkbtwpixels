@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import "./Splash.css";
+import "./Login.css";
 
-class Splash extends Component {
+class Login extends Component {
+
 
   componentDidMount(){
     console.log("Dash Loaded!");
@@ -31,5 +32,5 @@ class Splash extends Component {
     );
   }
 }
-export default Splash;
+export default Login;
 

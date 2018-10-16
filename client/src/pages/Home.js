@@ -7,8 +7,26 @@ import Login from "./Login";
 
 //Dashboard/welcome area of useful info. Popular games, hello from bot, etc
 
-class Dashboard extends Component {
-    componentDidMount(){
+class Home extends Component {
+  constructor(props){
+    super(props);
+      this.state = {
+        popular: [],
+        showModal: true
+      }
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal () {
+    this.setState ({ showModal: false });
+  }
+
+  componentDidMount(){
     //this.getPopular();
     console.log("Dash Loaded!");
   }
@@ -27,6 +45,10 @@ class Dashboard extends Component {
     return (
 
     <div className="hero is-fullheight" onLoad={this.handleOpenModal}>
+      <ReactModal
+      isOpen={this.state.showModal}
+      contentLabel="mini example!"
+      ><Login/><button onClick={this.handleCloseModal}></button></ReactModal>
 
       <div className="hero-head">
         <div className="container has-text-centered">
@@ -59,4 +81,4 @@ class Dashboard extends Component {
     );
   }
 }
-export default Dashboard;
+export default Home;

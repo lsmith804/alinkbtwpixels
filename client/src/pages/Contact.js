@@ -20,11 +20,12 @@ class Contact extends Component {
                 <h1 class="title">
                   Contact Us
                 </h1>
+                <h2 className="subtitle">
+                Have a question, need to report a bug, or just want to connect? I'll try to respond as soon as possible.
+                </h2>
                 <ul>
-                  <li><a href="emailto:lori.smith@richmond.edu"><i class="fas fa-envelope fa-4x"></i>  Email Us</a></li>
-                  <li><a href="https://www.linkedin.com/in/lori-smith-a5a67517/"><i class="fab fa-linkedin fa-4x"></i>  LinkedIn</a></li>
-
-                  
+                  <li><a href="emailto:lori.smith@richmond.edu"><i class="fas fa-envelope fa-4x"></i>  Email Me</a></li>
+                  <li><a href="https://www.linkedin.com/in/lori-smith-a5a67517/"><i class="fab fa-linkedin fa-4x"></i>  LinkedIn</a></li> 
                 </ul>
             </div>
           </div>

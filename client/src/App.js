@@ -1,6 +1,7 @@
 // import ReactDOM from 'react-dom';
 // import logo from './logo.svg';
-import Splash from "./pages/Splash";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Side from './components/Side';
 import Top from './components/Top';
 import Dashboard from './pages/Dashboard';
@@ -24,7 +25,8 @@ class App extends Component {
         <Top/>
         <Side/>
         <Switch>
-          <Route exact path='/' component={Splash}/>
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/login' component={Home}/>
           <Route exact path='/dashboard' component={Dashboard}/>
           <Route exact path='/aboutus' component={AboutUs}/>
           <Route exact path='/classicmysteries' component={ClassicMysteries}/>
@@ -35,8 +37,6 @@ class App extends Component {
           <Route exact path='/refer' component={Refer}/>
           <Route exact path='/contact' component={Contact}/>
           <Route exact path='/somethingcool' component={SomethingCool}/>
-
-
         </Switch>
       </div>
     )
