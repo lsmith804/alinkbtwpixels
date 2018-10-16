@@ -42,10 +42,10 @@ class UserSubmissions extends Component {
                       <div className="uscard is-dark">
                         <div>
                           <img src={item.photo} style={{width: 200, height: 200}}/>
-                          <p>Subject: {item.subject}</p>
-                          <p>Author: {item.username}</p>
-                          <p>Game: {item.game}</p>
-                          <p>Theory: {item.entry}</p>
+                          <p> <strong className="has-text-success">Subject:</strong> {item.subject}</p>
+                          <p> <strong className="has-text-success">Author:</strong> {item.username}</p>
+                          <p> <strong className="has-text-success">Game:</strong> {item.game}</p>
+                          <p> <strong className="has-text-success">Theory:</strong> {item.entry}</p>
                         </div>
                       </div>
                       <hr></hr>

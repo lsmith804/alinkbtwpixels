@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import WidgetBot from '@widgetbot/react-embed'
 import axios from "axios";
@@ -27,7 +28,8 @@ class NewSubmission extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    if (!this.state) {
+    //alert("click!");
+    if (this.state) {
      axios.post("/register", {
         subject: this.state.subject,
         username: this.state.username,
@@ -35,8 +37,16 @@ class NewSubmission extends Component {
         entry: this.state.entry,
         photo: this.state.photo
       })
-      .then(res => this.state)
-      .then(alert(`New entry ${this.state.subject} Saved!`));
+      // .then(res => this.state)
+      // .then(alert(`New entry ${this.state.subject} Saved!`))
+      // .then(this.setState(
+
+      // ))
+      .then(res => {
+        console.log(res)
+        this.props.history.push('./usersubmissions')
+      });
+    
     }
 
   };
@@ -52,7 +62,7 @@ class NewSubmission extends Component {
 render() {
   return (
     <section className="hero is-dark is-bold is-fullheight">
-      <div class="hero-head">
+      <div className="hero-head">
 
     <div className="container">
     <br></br>
@@ -133,9 +143,7 @@ render() {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <Link to={'./userSubmissions'}>
-                <button className="button is-success" disabled={this.state.disabled}>Submit</button>
-                </Link>
+                <button className="button is-success" disabled={this.state.disabled} onClick={this.handleSubmit}>Submit</button>
                 <hr></hr>
                 <p className="has-text-success">Changed your mind?</p>
                 <button className="button is-warning" onClick={this.resetForm}>
