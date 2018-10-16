@@ -5,11 +5,11 @@ class Chat extends Component {
 
 render() {
   return (
-    <section className="hero is-fullheight" id="discord">
+    <section className="hero is-fullheight is-dark" id="discord">
       <div className="hero-head">
         <div className="container">
         <br></br>
-          <h1 className="title">Discord Server</h1>
+          <h1 className="title">Discord Chat</h1>
           <h2 className="subtitle">
             It's dangerous to go alone. Let's go together. 
           </h2>

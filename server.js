@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const axios = require("axios");
+const cheerio = require("cheerio");
 require('dotenv').config()
 const PORT = process.env.PORT || 3001;
 var logger = require("morgan");
@@ -101,7 +102,6 @@ app.get("/profiles/all", function(req, res){
 
 //Get popular games from IGDB
 app.get("/populargames", (req,res) => {
-
   axios.get("https://api-endpoint.igdb.com/games/?fields=name,popularity&order=popularity:desc", {
     headers: {
       "user-key": IGDB_KEY,
@@ -152,8 +152,6 @@ app.get("/list", (req,res) => {
   var menu = ["item1", "item2", "item3"];
   res.json(menu);
 });
-
-
 
 // Send every other request to the React app & define any API routes before this runs
 app.get("*", (req, res) => {

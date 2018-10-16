@@ -2,6 +2,10 @@
     font-size: 30px;
     font-family: monospace;
     color: hsl(141, 71%, 48%);
+    background-image: url("../../images/minecraft.png");
+    background-position: center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
 }
 
 a {

@@ -28,7 +28,7 @@ class UserSubmissions extends Component {
 
     return (
       <section>
-        <div className="hero is-fullheight is-dark">
+        <div className="hero is-fullheight is-dark is-bold">
           <div className="hero-head">
             <div className="container">
             <br></br>

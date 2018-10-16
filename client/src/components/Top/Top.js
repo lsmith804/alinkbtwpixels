@@ -4,13 +4,13 @@ import "./Top.css";
 
 
 const Top = () =>
-<section className="hero is-bold is-small is-dark" id="bannerbackground">
+<section className="hero is-bold is-small" id="bannerbackground">
   <div className="hero-body">
       <h1 className="title" id="siteheader">
         A Link Between Pixels
       </h1>
-      <h2 className="subtitle">
-        For gamers who love to theorize on the weird & mysterious backstories of their favorite games.</h2>
+      <h2 className="subtitle has-text-white">
+        For gamers who love the curious & mysterious elements of their favorite games.</h2>
   </div>
 </section>;
 

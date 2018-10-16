@@ -26,14 +26,14 @@ class Dashboard extends Component {
 
     return (
 
-    <div className="hero is-fullheight" onLoad={this.handleOpenModal}>
+    <div className="hero is-fullheight is-dark is-bold" onLoad={this.handleOpenModal}>
 
       <div className="hero-head">
         <div className="container has-text-centered">
           <h1 className="title">Welcome!</h1>
           <h2 className="subtitle">A Link Between Pixels is your place to chat, read up on current gaming theory news, and post your own findings.</h2>
             <iframe src="https://discordapp.com/widget?id=497256090707165184&theme=dark" width="350" height="500" allowtransparency="true" frameBorder="0"></iframe>
-            <p>Chat with friends and our helpful chatbots <Link to={'./chat'}>here!</Link></p>
+            <p>Chat with friends and our (helpful?) chatbots <Link to={'./chat'} className="has-text-success">here!</Link></p>
         </div>
       </div>
 

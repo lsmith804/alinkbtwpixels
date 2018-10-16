@@ -51,7 +51,7 @@ class NewSubmission extends Component {
 
 render() {
   return (
-    <section className="hero is-dark is-fullheight">
+    <section className="hero is-dark is-bold is-fullheight">
       <div class="hero-head">
 
     <div className="container">

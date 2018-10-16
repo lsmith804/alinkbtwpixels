@@ -15,7 +15,7 @@ class NewMysteries extends Component {
   // Fetch the list on first mount
   componentDidMount() {
   
-    console.log("New Mysteries component loaded.");
+    console.log("New /Trending Mysteries component loaded.");
   }
 
 
@@ -24,17 +24,26 @@ class NewMysteries extends Component {
 
     return (
       <section>
-        <div className="hero is-small is-info is-bold">
-          <div className="hero-body">New & Trending</div>
-            <iframe id="embededSite" src="http://www.reddit.com" width="100%" height="100%" >
-              <p>Your browser does not support iframes.</p>
-            </iframe>
+        <div className="hero is-fullheight is-dark is-bold">
+          <div className="hero-head">
+            <div className="container">
+              <br></br>
+              <h1 className="title is-spaced">New & Trending</h1>
+              <h2 className="subtitle">The original inspiration for ALBP! Trending videos in this list usually include theories from MatPat, YuriOfWind, and Zeltik.</h2>
+              <br></br>
+              
+              <iframe id="ytplayer" type="text/html" width="720" height="405"
+              src="https://www.youtube.com/embed/?list=PLEoNm5tWtnivb0igEwS4GeGvnOkVALM08&listType=playlist"
+              frameBorder="0" allowFullScreen></iframe>
+              <ul>
+                  <li><a href="https://www.youtube.com/user/MatthewPatrick13" target="_blank" className="has-text-success"><i className="fab fa-youtube fa-2x"></i>  MatPat</a></li>
+                  <li><a href="https://www.youtube.com/user/Yuriofwind" target="_blank" className="has-text-primary"><i class="fab fa-youtube fa-2x"></i>  YuriOfWind</a></li> 
+                  <li><a href="https://www.youtube.com/channel/UCudx6plmpbs5WtWvsvu-EdQ" target="_blank" className="has-text-info"><i class="fab fa-youtube fa-2x"></i>  Zeltik</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div id="entries" className="column is-centered">
-        
 
-
-        </div>
       </section>
     );
   }
