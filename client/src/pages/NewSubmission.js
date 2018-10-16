@@ -121,7 +121,7 @@ render() {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <input className="input" typ="text" placeholder="Insert a URL link to your photo!" value={this.state.photo} onChange={this.handleChange} name="photo"></input>
+                <input className="input" typ="text" placeholder="Insert a URL link to a photo!" value={this.state.photo} onChange={this.handleChange} name="photo"></input>
               </div>
             </div>
           </div>
