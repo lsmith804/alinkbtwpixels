@@ -14,7 +14,7 @@ const List = props => (
           <strong  className="has-text-success">Summary:</strong> {props.summary}
         </li>
         <li>
-          <strong  className="has-text-success">Further Reading:</strong><a href={props.furtherURL}>  <u>{props.furtherTitle}</u>  <i class="fas fa-external-link-alt"></i>   </a>
+          <strong  className="has-text-success">Further Reading:</strong><a href={props.furtherURL} target="_blank">  <u>{props.furtherTitle}</u>  <i class="fas fa-external-link-alt"></i>   </a>
         </li>
       </ul>
     </div>
