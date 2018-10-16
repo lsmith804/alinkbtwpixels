@@ -79,7 +79,7 @@ render() {
             </div>
             <div className="field">
               <p className="control is-expanded has-icons-left">
-                <input className="input" type="text" placeholder="Leave blank to stay anonymous!" value={this.state.username} onChange={this.handleChange} name="username"></input>
+                <input className="input" type="text" placeholder="Who are you?" value={this.state.username} onChange={this.handleChange} name="username"></input>
                 <span className="icon is-small is-left">
                   <i className="fas fa-headset"></i>
                 </span>
