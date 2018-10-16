@@ -127,9 +127,9 @@ render() {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                {/* <Link to={'./userSubmissions'}> */}
+                <Link to={'./userSubmissions'}>
                 <button className="button is-success" disabled={this.state.disabled}>Submit</button>
-                {/* </Link> */}
+                </Link>
                 <hr></hr>
                 <p>Changed your mind?</p>
                 <button className="button is-warning" onClick={this.resetForm}>

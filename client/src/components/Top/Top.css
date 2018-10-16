@@ -1,8 +1,7 @@
 #siteheader, #bannerbackground {
-    background-color: black;
-    color: limegreen;
     font-size: 30px;
     font-family: monospace;
+    color: hsl(141, 71%, 48%);
 }
 
 a {
