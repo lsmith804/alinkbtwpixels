@@ -28,29 +28,33 @@ class UserSubmissions extends Component {
 
     return (
       <section>
-        <div className="hero is-small is-info is-bold">
-          <div className="hero-body">User-Submitted Theories & Findings</div>
-        </div>
-        <div id="entries" className="column is-centered">
-
-        <div className="column is-10 is-offset-2">
-            {members.map((item, index) => {
-              return(
-                <div key={index} className="is-clipped">
-                  <div className="card">
-                    <div className="media-content">
-                      <img src={item.photo} style={{width: 100, height: 100}}/>
-                      <p>Subject: {item.subject}</p>
-                      <p>Author: {item.username}</p>
-                      <p>Game: {item.game}</p>
-                      <p>Theory: {item.entry}</p>
+        <div className="hero is-fullheight is-dark">
+          <div className="hero-head">
+            <div className="container">
+            <br></br>
+            <h1 className="title is-spaced">User-Submitted Theories & Findings</h1>
+            </div>
+            <br></br>
+            <div className="container">
+              {members.map((item, index) => {
+                  return(
+                    <div key={index} className="is-clipped">
+                      <div className="uscard is-dark">
+                        <div>
+                          <img src={item.photo} style={{width: 200, height: 200}}/>
+                          <p>Subject: {item.subject}</p>
+                          <p>Author: {item.username}</p>
+                          <p>Game: {item.game}</p>
+                          <p>Theory: {item.entry}</p>
+                        </div>
+                      </div>
+                      <hr></hr>
                     </div>
-                  </div>
-                  <hr></hr>
-                </div>
-              );
-            })}</div>
+                  );
+              })}
+            </div>
         </div>
+      </div>
     </section>
 
     );

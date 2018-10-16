@@ -11,32 +11,31 @@ class ClassicMysteries extends Component {
   render() {
     return (
       <section>
-        <div className="container">
-        <div className="hero is-small is-info is-bold">
-          <div className="hero-body">Classic Theories & Unsolved Mysteries</div>
-        </div>
-          <div >
-          {this.state.classics.map(classic => (
-            <List
-              id={classic.id}
-              key={classic.key}
-              name={classic.name}
-              image={classic.image}
-              summary={classic.summary}
-              furtherTitle={classic.furtherTitle}
-              furtherURL={classic.furtherURL}
-
-            />
-          ))}</div>
+        <div className="hero is-fullheight is-dark">
+            <div className="hero-head">
+            <div className="container">
+            <br></br>
+            <h1 className="title is-spaced">Classic Theories & Unsolved Mysteries</h1>
+            </div>
+            <br></br>
+              <div className="container">
+              {this.state.classics.map(classic => (
+                <List
+                  id={classic.id}
+                  key={classic.key}
+                  name={classic.name}
+                  image={classic.image}
+                  summary={classic.summary}
+                  furtherTitle={classic.furtherTitle}
+                  furtherURL={classic.furtherURL}
+                />
+              ))}
+              </div>
           </div>
+        </div>
       </section>
     );
   }
-
 };
-
-
-
-
 
 export default ClassicMysteries;

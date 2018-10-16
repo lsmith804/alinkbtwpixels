@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class AboutUs extends Component {
 
@@ -12,31 +13,28 @@ class AboutUs extends Component {
  
   render() {
     return (
+      <section className="hero is-dark is-fullheight">
+        <div class="hero-head">
+          <div className="container">
+          <br></br>
+            <h1 className="title is-spaced">About</h1>
+            <h2 className="subtitle"></h2>
+            <br></br>
+            <div>
+            <p className="p"><strong>THANK YOU</strong> for visiting A Link Between Pixels, your number one source for researching and sharing oddities in video games! ALBP is dedicated to keeping you informed, providing information for newcomers, and helping you connect with fellow theorists.</p><br></br>
 
-      <div>
-        <section className="hero is-light">
-          <div class="hero-body">
-            <div className="container">
-                <h1 class="title">
-                  About Us
-                </h1>
-                <h1 class="subtitle">
-                  GM&T History - Today
-                </h1>
+            <p>Launched in 2018, ALBP has come a long way from its beginnings in the comments sections of MatPat's Game Theory and YuriOfWind's Gaming Mysteries. That's right! ALBP was born from the thrill that comes from reading up on the latest video game theories and mysteries.</p><br></br>
+
+            <p>I hope you enjoy ALBP as much as I enjoy offering this platform. If you have any questions or comments, please don't hesitate to <Link to={"./contact"} className="has-text-success link"> contact me.</Link></p><br></br>
+
+            <p>
+            Sincerely,<br></br>
+            Lori ^_^
+            </p>
             </div>
           </div>
-        </section>
-        <div className="p">Welcome to [Gaming Mysteries & Theories!], your number one source for researching and sharing oddities in video games! We're dedicated to keeping you up to date with new theories and providing information for newcomers.
-
-        Founded in 2018 by Lori Smith, [GM&T] has come a long way from its beginnings in the comments sections of MatPat's Game Theory and YuriOfWind's Gaming Mysteries. When Lori first started out, her passion for [video games and the theories surrounding their backstories] drove her to do intense research, and lead her to look for a website or social media platform that catered to individuals with the same interest. After she was unable to find a "hub" for this culture, she decided to create her own.
-
-        We hope you enjoy [GM&T] as much as we enjoy offering this platform. If you have any questions or comments, please don't hesitate to contact us.
-
-        Sincerely,
-        GM&T
-        </div>
-              
-      </div>
+        </div>  
+      </section>
     );
   };
 }

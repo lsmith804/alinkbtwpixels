@@ -12,7 +12,7 @@ const Side = () =>
   </p>
   <ul className="menu-list">
     <li><Link to={'./dashboard'}>🍍 Dashboard</Link></li>
-    <li><Link to={'./aboutus'}>📖 About Us</Link></li>
+    <li><Link to={'./aboutus'}>📖 About ALBP</Link></li>
   </ul>
   <p className="menu-label has-background-success has-text-black">
     Theory
@@ -28,10 +28,7 @@ const Side = () =>
   </p>
   <ul className="menu-list">
     <li><Link to={'./chat'}>💬 Chat</Link></li>
-    <li><Link to={'./refer'}>💗 Share</Link></li>
     <li><Link to={'./contact'}>📞 Contact</Link></li>
-
-
   </ul>
     <p className="menu-label has-background-success has-text-black">
     More

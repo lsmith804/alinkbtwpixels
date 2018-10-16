@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import axios from "axios";
-import "./NewSubmission.css";
 import WidgetBot from '@widgetbot/react-embed'
 import axios from "axios";
 
@@ -53,14 +51,22 @@ class NewSubmission extends Component {
 
 render() {
   return (
-    <div className="section">
-      <form onSubmit={this.handleSubmit} id="memberForm">
+    <section className="hero is-dark is-fullheight">
+      <div class="hero-head">
+
+    <div className="container">
+    <br></br>
+      <h1 className="title is-spaced">Submit Your Own Theory</h1>
+      <h2 className="subtitle"></h2>
+      <br></br>
+      <div className="container">
+      <form onSubmit={this.handleSubmit} id="memberForm" className="is-dark is-pulled-left">
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">Subject</label>
+            <label className="label has-text-success">Subject</label>
           </div>
           <div className="field-body">
-            <div className="field">
+            <div className="field is-horizontal">
               <p className="control is-expanded has-icons-left">
                 <input className="input" type="text" placeholder="What is this about?" value={this.state.subject} onChange={this.handleChange} name="subject"></input>
                 <span className="icon is-small is-left">
@@ -69,7 +75,7 @@ render() {
               </p>
             </div>
             <div className="field-label is-normal">
-              <label className="label">Username</label>
+              <label className="label has-text-success">Username</label>
             </div>
             <div className="field">
               <p className="control is-expanded has-icons-left">
@@ -84,7 +90,7 @@ render() {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">Game</label>
+            <label className="label has-text-success">Game</label>
           </div>
           <div className="field-body">
             <div className="field">
@@ -97,7 +103,7 @@ render() {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">Entry</label>
+            <label className="label has-text-success">Entry</label>
           </div>
           <div className="field-body">
             <div className="field">
@@ -110,7 +116,7 @@ render() {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">Photo URL</label>
+            <label className="label has-text-success">Photo URL</label>
           </div>
           <div className="field-body">
             <div className="field">
@@ -131,7 +137,7 @@ render() {
                 <button className="button is-success" disabled={this.state.disabled}>Submit</button>
                 </Link>
                 <hr></hr>
-                <p>Changed your mind?</p>
+                <p className="has-text-success">Changed your mind?</p>
                 <button className="button is-warning" onClick={this.resetForm}>
                   Reset
                 </button>
@@ -150,7 +156,10 @@ render() {
             api.emit('sendMessage', 'Hello world')
           })*/
         }
-  </div>
+        </div>
+        </div>
+        </div>
+  </section>
   );
   };
 }

@@ -10,7 +10,7 @@ const Top = () =>
         A Link Between Pixels
       </h1>
       <h2 className="subtitle">
-        For gamers who love to theorize on the weird & mysterious backstories of their favorite games. ^_^</h2>
+        For gamers who love to theorize on the weird & mysterious backstories of their favorite games.</h2>
   </div>
 </section>;
 
