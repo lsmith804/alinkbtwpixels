@@ -35,6 +35,8 @@ const Side = () =>
   </p>
   <ul className="menu-list">
     <li><Link to={'./somethingcool'}>❔ Something Cool</Link></li>
+    <li><Link to={'./'}>🚪 Exit</Link></li>
+
   </ul>
 
 </aside>
