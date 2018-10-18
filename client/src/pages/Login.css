@@ -4,9 +4,15 @@
 */
 
 #return {
-    color: limegreen;
+    color: hsl(120, 61%, 50%);
     text-shadow: 2px 2px white;
+    font-family: monospace;
     
+}
+
+#entermodal, #emailmodal, #passwordmodal {
+    font-family: monospace;
+
 }
 
 #splash {
