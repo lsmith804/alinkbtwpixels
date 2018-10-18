@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3001;
 var logger = require("morgan");
 var request = require("request");
 const connection = require("./connection");
+//var moment = require("moment-timezone");
 
 const Discord = require("discord.js");
 const token = process.env.DISCORD_BOT_SECRET;
@@ -23,6 +24,7 @@ clbot.configure({ botapi: process.env.I_AM_KEY});
 //   console.log(response.output);
 // });
 
+//var time = moment().tz("America/New_York");
 
 const igdb = require('igdb-api-node').default;
 const IGDB_KEY = process.env.IGDB_SECRET;
@@ -125,6 +127,8 @@ app.post("/register", function(req,res){
   var newGame = req.body.game;
   var newEntry = req.body.entry;
   var newPhoto = req.body.photo;
+  var newDate = req.body.createdAt;
+
 
   connection.query(
     "INSERT INTO entries SET ?",
@@ -133,7 +137,9 @@ app.post("/register", function(req,res){
       username: newUsername,
       game: newGame,
       entry: newEntry,
-      photo: newPhoto
+      photo: newPhoto,
+      date: newDate
+
     },
     function(err, queryResult) {
       if(!!err){
