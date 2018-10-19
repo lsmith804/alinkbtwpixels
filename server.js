@@ -138,7 +138,7 @@ app.post("/register", function(req,res){
       game: newGame,
       entry: newEntry,
       photo: newPhoto,
-      date: newDate
+      createdAt: newDate
 
     },
     function(err, queryResult) {
