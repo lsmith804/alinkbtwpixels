@@ -127,7 +127,6 @@ app.post("/register", function(req,res){
   var newGame = req.body.game;
   var newEntry = req.body.entry;
   var newPhoto = req.body.photo;
-  var newDate = req.body.createdAt;
 
 
   connection.query(
@@ -138,7 +137,6 @@ app.post("/register", function(req,res){
       game: newGame,
       entry: newEntry,
       photo: newPhoto,
-      createdAt: newDate
 
     },
     function(err, queryResult) {

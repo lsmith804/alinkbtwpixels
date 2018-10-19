@@ -13,7 +13,7 @@ class NewSubmission extends Component {
       game: "",
       entry: "",
       photo: "",
-      disabled: true
+      disabled: true,
     }
     this.baseState=this.state;
   }

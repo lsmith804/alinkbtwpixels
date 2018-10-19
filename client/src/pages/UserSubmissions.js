@@ -45,7 +45,6 @@ class UserSubmissions extends Component {
                           <p> <strong className="has-text-success">Subject:</strong> {item.subject}</p>
                           <p> <strong className="has-text-success">Author:</strong> {item.username}</p>
                           <p> <strong className="has-text-success">Game:</strong> {item.game}</p>
-                          <p> <strong className="has-text-success">Posted:</strong> {item.createdAt}</p>
                           <p> <strong className="has-text-success">Theory:</strong> {item.entry}</p>
                         </div>
                       </div>
