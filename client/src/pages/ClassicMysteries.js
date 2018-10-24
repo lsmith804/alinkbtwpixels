@@ -7,7 +7,7 @@ class ClassicMysteries extends Component {
   state = { classics };
 
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this state and render a card component for each object
   render() {
     return (
       <section>
