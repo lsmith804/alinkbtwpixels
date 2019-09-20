@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 class AboutUs extends Component {
 
-  //Handle clicks! More to come.
   handleClick = event => {
     event.preventDefault();
     event.target.selected = true;

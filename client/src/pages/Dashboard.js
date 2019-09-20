@@ -5,7 +5,6 @@ import "./Dashboard.css";
 import ReactModal from 'react-modal';
 import Login from "./Login";
 
-//Dashboard/welcome area of useful info. Popular games, hello from bot, etc
 
 class Dashboard extends Component {
     componentDidMount(){
