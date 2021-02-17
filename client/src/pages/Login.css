@@ -1,0 +1,25 @@
+/* aside {
+    display: none;
+}
+*/
+
+#return {
+    color: hsl(120, 61%, 50%);
+    text-shadow: 2px 2px white;
+    font-family: monospace;
+    
+}
+
+#entermodal, #emailmodal, #passwordmodal {
+    font-family: monospace;
+
+}
+
+#splash {
+    background-image: url("../images/minecraft.png");
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-color: #999;
+    color: white;
+};
